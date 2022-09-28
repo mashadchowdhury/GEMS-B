@@ -9,6 +9,8 @@
 
 ## Milestone 1: Requirements Report
 
+Task: Research Laravel + other tech stack requirements: Everyone
+
 ***
 *Requirements Report*
 We will need to submit a pdf report 

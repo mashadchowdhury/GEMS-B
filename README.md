@@ -1,5 +1,6 @@
 # GEMS-B
 
+Client Guidelines/Requirements: [link](https://docs.google.com/document/d/1QihJwHGf21KwdMD0RD1Cv3IDLi0mGxSd2uo_oKJF6tQ/edit)
 # Milestones
 
 ## Weekly Checkpoint: September 23rd
@@ -9,7 +10,9 @@
 
 ***
 *Requirements Report*
+
 We will need to submit a pdf report 
+
 Task: High-level description of software and target user groups (1 paragraph): **Mashad**
 
 Task: DFD at levels 0 and 1: **Jon**
@@ -24,9 +27,9 @@ Task: Testing and integration methods: **Brendan**
 
 Task: List of questions asked and our answers from the requirements presentation
 ***
-*Requirements Presentation*
-We will need to submit a pdf of slides and a 7 minute video of our presentation.
-Everyone will present from their assigned tasks in the requirements report
+*Requirements Presentation* [link to presentation](https://docs.google.com/presentation/d/1Ea1mbo37PhhvyxXTCYh0MNJ2fWqKhebvkTHHoV0DTpE/edit?usp=sharing)
+
+We will need to submit a pdf of slides and a 7 minute video of our presentation. Everyone will present from their assigned tasks in the requirements report
 
 Task: Slide creation (Collaborative on Googe Slides)
 
@@ -37,6 +40,9 @@ Task: Video Editing : **Mohammed**
 
 
 ## Weekly Checkpoint: September 30th
+
+IP Agreement: [link](https://docs.google.com/document/d/1r8ovwDyKNObXJOkx97MzuQUwNF7pO3qw4YOi225d4Fo/edit?usp=sharing)
+
 *Hard deadline: IP Agreement*
 ***
 

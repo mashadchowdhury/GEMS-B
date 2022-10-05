@@ -11,7 +11,7 @@ Client Guidelines/Requirements: [link](https://docs.google.com/document/d/1QihJw
 Task: Research Laravel + other tech stack requirements: Everyone
 
 ***
-*Requirements Report*
+*Requirements Report* [link to report](https://docs.google.com/document/d/18-OEskgXC9tA3IkA8cFmNeUtcdtNlhOucZf2g1xv8pE/edit?usp=sharing)
 
 We will need to submit a pdf report 
 

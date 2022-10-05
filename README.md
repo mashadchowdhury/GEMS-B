@@ -8,6 +8,8 @@ Client Guidelines/Requirements: [link](https://docs.google.com/document/d/1QihJw
 
 ## Milestone 1: Requirements Report
 
+Task: Research Laravel + other tech stack requirements: Everyone
+
 ***
 *Requirements Report*
 

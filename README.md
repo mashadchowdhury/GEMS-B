@@ -40,7 +40,7 @@ Task: Script/Audio Recording (Submit to video editor)
 Task: Video Editing : **Mohammed**
 ***
 
-### k
+
 ## Weekly Checkpoint: September 30th
 
 IP Agreement: [link](https://docs.google.com/document/d/1r8ovwDyKNObXJOkx97MzuQUwNF7pO3qw4YOi225d4Fo/edit?usp=sharing)

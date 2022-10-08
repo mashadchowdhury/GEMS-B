@@ -45,7 +45,7 @@ Task: Video Editing : **Mohammed**
 
 IP Agreement: [link](https://docs.google.com/document/d/1r8ovwDyKNObXJOkx97MzuQUwNF7pO3qw4YOi225d4Fo/edit?usp=sharing)
 
-*Hard deadline: IP Agreement*
+*Hard deadline: IP Agreement* : Finished
 ***
 
 
@@ -54,7 +54,7 @@ IP Agreement: [link](https://docs.google.com/document/d/1r8ovwDyKNObXJOkx97MzuQU
 
 
 ## Weekly Checkpoint: October 14th
-*Hard deadline: Requirements Presentation*
+*Hard deadline: Requirements Presentation* (friday 9:34 am)
 
 *Hard deadline: Group Evaluation*
 ***

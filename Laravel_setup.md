@@ -7,3 +7,5 @@
 
 # Creating Laravel app file: 
 ## composer create-project laravel/laravel php-laravel-project-crud
+
+# Do more research when it comes to Docker

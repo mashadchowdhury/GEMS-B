@@ -3,6 +3,7 @@
 ***
 Insatall PHP and Composer
 Set up a wokring enviroment (maybe env with virtualenv)
+Laravel documentation : https://laravel.com/docs/9.x#getting-started-on-windows
 
 
 # Creating Laravel app file: 

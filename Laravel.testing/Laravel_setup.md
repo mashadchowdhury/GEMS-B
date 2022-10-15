@@ -1,8 +1,8 @@
 # Steps for Laravel setup
 
-
-*Insatall PHP and Composer
-*Set up a wokring enviroment (maybe env with virtualenv)
+***
+Insatall PHP and Composer
+Set up a wokring enviroment (maybe env with virtualenv)
 
 
 # Creating Laravel app file: 

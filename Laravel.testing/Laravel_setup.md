@@ -9,3 +9,4 @@
 ## composer create-project laravel/laravel php-laravel-project-crud
 
 # Do more research when it comes to Docker
+### Install code runner on vscode

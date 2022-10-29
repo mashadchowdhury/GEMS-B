@@ -1,7 +1,6 @@
 # Steps for Laravel setup
 
 ***
-Install PHP and Composer
 
 Set up a working enviroment (maybe env with virtualenv)
 Laravel documentation : https://laravel.com/docs/9.x#getting-started-on-windows
@@ -11,4 +10,4 @@ Laravel documentation : https://laravel.com/docs/9.x#getting-started-on-windows
 ## composer create-project laravel/laravel php-laravel-project-crud
 
 # Do more research when it comes to Docker
-### Install code runner on vscode
+### Install code runner on VScode

@@ -3,10 +3,10 @@
 Client Guidelines/Requirements: [link](https://docs.google.com/document/d/1QihJwHGf21KwdMD0RD1Cv3IDLi0mGxSd2uo_oKJF6tQ/edit)
 # Milestones
 
-## Weekly Checkpoint: September 23rd
+### Weekly Checkpoint: September 23rd
 *Hard Deadline: Team Contract* : Finished
 
-## Milestone 1: Requirements Report
+# Milestone 1: Requirements Report
 
 Task: Research Laravel + other tech stack requirements: Everyone
 
@@ -41,40 +41,70 @@ Task: Video Editing : **Mohammed**
 ***
 
 
-## Weekly Checkpoint: September 30th
+### Weekly Checkpoint: September 30th
 
 IP Agreement: [link](https://docs.google.com/document/d/1r8ovwDyKNObXJOkx97MzuQUwNF7pO3qw4YOi225d4Fo/edit?usp=sharing)
 
-*Hard deadline: IP Agreement* : Finished
+~~*Hard deadline: IP Agreement* : Finished~~
 ***
 
 
-## Weekly Checkpoint: October 7th
+### Weekly Checkpoint: October 7th
 ***
 
 
-## Weekly Checkpoint: October 14th
-*Hard deadline: Requirements Presentation* (friday 9:34 am)
+### Weekly Checkpoint: October 14th
+~~*Hard deadline: Requirements Presentation* (friday 9:34 am) : Finished~~
 
-*Hard deadline: Group Evaluation*
+~~*Hard deadline: Group Evaluations* : Finished~~
 ***
 
 
 ### Weekly Checkpoint: October 21st
-*Hard deadline: Requirements Report*
+~~*Hard deadline: Requirements Report* : Finished~~
+
+***
+
+### Weekly Checkpoint: October 28th
+Task: Install and configure tech stack
+
+Task: Prototype Website UI
+
+Task: Dummy database
+
+Task: Gantt Chart
+***
+
+### Weekly Checkpoint: November 4th
+
+***
+
+### Weekly Checkpoint: November 11th
+**Reading Week**
+***
+
+### Weekly Checkpoint: November 18th
+
+***
+
+### Weekly Checkpoint: November 25th
+
+***
+# Milestone 2: Peer-Testing #1
+### Weekly Checkpoint: December 2nd
+
+*Hard deadline: Peer Testing Report #1*
+
+*Hard deadline: Prototype Video*
 
 ***
 ***
-## Milestone 2: Peer-Testing #1
-*Hard deadline: December 2nd*
+## Milestone 3: Peer-Testing #2: January 2023
 
 ***
 ***
-## Milestone 3: Peer-Testing #2
-
-***
-***
-## Milestone 4: Product Delivery
+## Milestone 4: Product Delivery: March 2023
 
 ***
 ## Extra Features
+Will be updated accordingly

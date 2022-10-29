@@ -99,11 +99,12 @@ Task: Gantt Chart
 
 ***
 ***
-## Milestone 3: Peer-Testing #2
+## Milestone 3: Peer-Testing #2: January 2023
 
 ***
 ***
-## Milestone 4: Product Delivery
+## Milestone 4: Product Delivery: March 2023
 
 ***
 ## Extra Features
+Will be updated accordingly

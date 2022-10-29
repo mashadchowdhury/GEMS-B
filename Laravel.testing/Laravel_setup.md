@@ -1,9 +1,9 @@
 # Steps for Laravel setup
 
 ***
-Insatall PHP and Composer
+Install PHP and Composer
 
-Set up a wokring enviroment (maybe env with virtualenv)
+Set up a working enviroment (maybe env with virtualenv)
 Laravel documentation : https://laravel.com/docs/9.x#getting-started-on-windows
 
 ## Figure out Vie issues

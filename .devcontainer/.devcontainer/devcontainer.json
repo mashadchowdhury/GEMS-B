@@ -29,20 +29,13 @@
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
 	"features": {
-		"docker-in-docker": "latest",
-		"docker-from-docker": "20.10",
-		"terraform": "latest",
+		"docker-in-docker": "20.10",
 		"git": "os-provided",
 		"git-lfs": "latest",
 		"github-cli": "latest",
 		"sshd": "latest",
-		"homebrew": "latest",
-		"python": "latest",
-		"golang": "latest",
-		"java": "lts",
-		"maven": "latest",
-		"ruby": "latest",
-		"rust": "latest",
-		"powershell": "latest"
+		"python": "3.10",
+		"java": "17",
+		"powershell": "7.1"
 	}
 }

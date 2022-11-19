@@ -1,4 +1,5 @@
 <?php
+//Gate
 
 namespace Illuminate\Auth\Access;
 

@@ -1,4 +1,5 @@
 <?php
+//Logout
 
 namespace Illuminate\Auth\Events;
 

@@ -1,4 +1,5 @@
 <?php
+//Reset Password
 
 namespace Illuminate\Auth\Notifications;
 

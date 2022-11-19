@@ -1,4 +1,5 @@
 <?php
+//Auth Manager
 
 namespace Illuminate\Auth;
 

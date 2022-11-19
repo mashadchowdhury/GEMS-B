@@ -1,4 +1,5 @@
 <?php
+//Example test
 
 namespace Tests\Unit;
 

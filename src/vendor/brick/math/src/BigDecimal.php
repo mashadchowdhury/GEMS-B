@@ -1,5 +1,4 @@
 <?php
-//Big Decimal
 
 declare(strict_types=1);
 

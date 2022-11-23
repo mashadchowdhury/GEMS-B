@@ -1,5 +1,4 @@
 <?php
-//Test Case
 
 namespace Tests;
 

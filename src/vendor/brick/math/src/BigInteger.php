@@ -1,5 +1,4 @@
 <?php
-//Big Integer
 
 declare(strict_types=1);
 

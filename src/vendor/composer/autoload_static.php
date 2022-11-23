@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit477cfd202869bb8cf40600a00825f8b1
+class ComposerStaticInit723e1ae66c66e261e2b631d6863e94c6
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -1624,7 +1624,9 @@ class ComposerStaticInit477cfd202869bb8cf40600a00825f8b1
         'Illuminate\\Config\\Repository' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Config/Repository.php',
         'Illuminate\\Console\\Application' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Application.php',
         'Illuminate\\Console\\BufferedConsoleOutput' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/BufferedConsoleOutput.php',
+        'Illuminate\\Console\\CacheCommandMutex' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/CacheCommandMutex.php',
         'Illuminate\\Console\\Command' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Command.php',
+        'Illuminate\\Console\\CommandMutex' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/CommandMutex.php',
         'Illuminate\\Console\\Concerns\\CallsCommands' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php',
         'Illuminate\\Console\\Concerns\\CreatesMatchingTest' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Concerns/CreatesMatchingTest.php',
         'Illuminate\\Console\\Concerns\\HasParameters' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Concerns/HasParameters.php',
@@ -1713,6 +1715,7 @@ class ComposerStaticInit477cfd202869bb8cf40600a00825f8b1
         'Illuminate\\Contracts\\Cache\\Store' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Cache/Store.php',
         'Illuminate\\Contracts\\Config\\Repository' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Config/Repository.php',
         'Illuminate\\Contracts\\Console\\Application' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Console/Application.php',
+        'Illuminate\\Contracts\\Console\\Isolatable' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Console/Isolatable.php',
         'Illuminate\\Contracts\\Console\\Kernel' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Console/Kernel.php',
         'Illuminate\\Contracts\\Container\\BindingResolutionException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Container/BindingResolutionException.php',
         'Illuminate\\Contracts\\Container\\CircularDependencyException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Container/CircularDependencyException.php',
@@ -5656,10 +5659,10 @@ class ComposerStaticInit477cfd202869bb8cf40600a00825f8b1
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit477cfd202869bb8cf40600a00825f8b1::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit477cfd202869bb8cf40600a00825f8b1::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit477cfd202869bb8cf40600a00825f8b1::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit477cfd202869bb8cf40600a00825f8b1::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit723e1ae66c66e261e2b631d6863e94c6::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit723e1ae66c66e261e2b631d6863e94c6::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit723e1ae66c66e261e2b631d6863e94c6::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit723e1ae66c66e261e2b631d6863e94c6::$classMap;
 
         }, null, ClassLoader::class);
     }

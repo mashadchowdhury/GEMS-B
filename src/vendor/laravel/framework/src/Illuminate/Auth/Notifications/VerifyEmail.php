@@ -1,5 +1,4 @@
 <?php
-//Verify Email
 
 namespace Illuminate\Auth\Notifications;
 

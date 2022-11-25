@@ -1,5 +1,4 @@
 <?php
-//Rounding Mode
 
 declare(strict_types=1);
 

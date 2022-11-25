@@ -1,5 +1,4 @@
 <?php
-//Email verify
 
 namespace Illuminate\Auth\Middleware;
 

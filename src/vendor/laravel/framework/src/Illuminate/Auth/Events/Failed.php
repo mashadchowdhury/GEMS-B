@@ -1,5 +1,4 @@
 <?php
-//Failed
 
 namespace Illuminate\Auth\Events;
 

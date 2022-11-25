@@ -1,5 +1,4 @@
 <?php
-//eneric User 
 
 namespace Illuminate\Auth;
 

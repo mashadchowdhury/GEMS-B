@@ -1,5 +1,4 @@
 <?php
-//Loalization
 
 /**
  * This file is part of the Carbon package.
@@ -357,6 +356,13 @@ trait Localization
             $months = $messages['months'] ?? [];
             $weekdays = $messages['weekdays'] ?? [];
             $meridiem = $messages['meridiem'] ?? ['AM', 'PM'];
+
+            if (isset($messages['ordinal_words'])) {
+                $timeString = self::replaceOrdinalWords(
+                    $timeString,
+                    $key === 'from' ? array_flip($messages['ordinal_words']) : $messages['ordinal_words']
+                );
+            }
 
             if ($key === 'from') {
                 foreach (['months', 'weekdays'] as $variable) {
@@ -821,5 +827,12 @@ trait Localization
         }
 
         return $list;
+    }
+
+    private static function replaceOrdinalWords(string $timeString, array $ordinalWords): string
+    {
+        return preg_replace_callback('/(?<![a-z])[a-z]+(?![a-z])/i', function (array $match) use ($ordinalWords) {
+            return $ordinalWords[mb_strtolower($match[0])] ?? $match[0];
+        }, $timeString);
     }
 }

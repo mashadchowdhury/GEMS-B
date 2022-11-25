@@ -1,5 +1,4 @@
 <?php
-//Auth Service Provider
 
 namespace Illuminate\Auth;
 

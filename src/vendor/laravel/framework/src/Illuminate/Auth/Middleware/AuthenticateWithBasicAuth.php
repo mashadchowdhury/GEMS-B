@@ -1,5 +1,5 @@
 <?php
-//Authenticate basic
+
 namespace Illuminate\Auth\Middleware;
 
 use Closure;

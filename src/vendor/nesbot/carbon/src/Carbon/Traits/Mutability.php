@@ -1,5 +1,4 @@
 <?php
-//Mutabiity
 
 /**
  * This file is part of the Carbon package.

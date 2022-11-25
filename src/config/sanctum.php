@@ -1,5 +1,4 @@
 <?php
-//Sanctum
 
 use Laravel\Sanctum\Sanctum;
 

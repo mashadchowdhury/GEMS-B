@@ -1,5 +1,4 @@
 <?php
-//Guard Helpers
 
 namespace Illuminate\Auth;
 

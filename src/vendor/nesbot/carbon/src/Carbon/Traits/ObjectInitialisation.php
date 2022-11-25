@@ -1,5 +1,4 @@
 <?php
-//Object Initialization
 
 /**
  * This file is part of the Carbon package.

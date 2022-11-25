@@ -1,5 +1,4 @@
 <?php
-//Mail
 
 return [
 

@@ -1,5 +1,4 @@
 <?php
-//Handles Authorization
 
 namespace Illuminate\Auth\Access;
 

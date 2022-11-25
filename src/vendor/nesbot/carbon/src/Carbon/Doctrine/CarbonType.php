@@ -1,5 +1,4 @@
 <?php
-//Carbon Type
 
 /**
  * This file is part of the Carbon package.

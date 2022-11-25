@@ -1,5 +1,4 @@
 <?php
-//Big Rational
 
 declare(strict_types=1);
 

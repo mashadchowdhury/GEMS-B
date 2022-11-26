@@ -1,4 +1,5 @@
 <?php
+//Null Dispatcher
 
 namespace Illuminate\Events;
 

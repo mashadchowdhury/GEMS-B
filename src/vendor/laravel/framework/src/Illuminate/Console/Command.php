@@ -1,4 +1,5 @@
 <?php
+//Command
 
 namespace Illuminate\Console;
 

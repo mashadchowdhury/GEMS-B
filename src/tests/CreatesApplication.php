@@ -1,5 +1,4 @@
 <?php
-//Creates Application
 
 namespace Tests;
 

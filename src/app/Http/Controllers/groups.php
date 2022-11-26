@@ -23,7 +23,7 @@ class groups extends Controller
     //brings the user to the edit bookings screen and displays all data in the data base for the given id
     function editBookedGroups($id){
         $data = DB::table('')->find($id);
-        return view("",['data'=>$data];);
+        return view("",['data'=>$data]);
     }
 
     //TODO:

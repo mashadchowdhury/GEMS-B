@@ -9,11 +9,23 @@ class groups extends Controller
 {
     //
 
-    function getGroup(Request $req){
+    //gets 
+    function getBookedGroups(Request $req){
 
-        $group = $req->input('');
-        $result = DB::table('')->where('group',$group)->get();
+        #$group = $req->input('');
+        $result = DB::table('')->select('GroupName','PrimaryContact','phone','email','ESS','NumMembers')
+        ->where('Booked','booked')->get();
 
         return view("",[''=>$result]);
+    }
+
+    //TODO:
+    function editBookedGroups(Request $req){
+
+    }
+
+    //TODO:
+    function assignAccomidation(Request $req){
+        
     }
 }

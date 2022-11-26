@@ -1,5 +1,4 @@
 <?php
-//Deprecated Properties
 
 declare(strict_types=1);
 

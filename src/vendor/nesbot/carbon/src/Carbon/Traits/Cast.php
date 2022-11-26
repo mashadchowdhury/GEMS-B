@@ -1,5 +1,4 @@
 <?php
-//Cast
 
 /**
  * This file is part of the Carbon package.

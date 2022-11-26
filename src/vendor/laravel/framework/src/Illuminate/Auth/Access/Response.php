@@ -1,5 +1,4 @@
 <?php
-//Response
 
 namespace Illuminate\Auth\Access;
 

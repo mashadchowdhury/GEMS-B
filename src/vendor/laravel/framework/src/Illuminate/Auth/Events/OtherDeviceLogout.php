@@ -1,5 +1,4 @@
 <?php
-//Logout Other Device
 
 namespace Illuminate\Auth\Events;
 

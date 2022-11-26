@@ -1,5 +1,4 @@
 <?php
-//Carbon Immutable Type
 
 /**
  * This file is part of the Carbon package.

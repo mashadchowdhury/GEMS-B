@@ -1,5 +1,7 @@
 <?php
+
 //Generic User 
+
 
 namespace Illuminate\Auth;
 

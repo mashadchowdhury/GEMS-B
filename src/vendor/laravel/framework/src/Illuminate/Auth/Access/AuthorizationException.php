@@ -1,5 +1,4 @@
 <?php
-//Authorization Exception
 
 namespace Illuminate\Auth\Access;
 

@@ -1,5 +1,4 @@
 <?php
-//Lockout
 
 namespace Illuminate\Auth\Events;
 

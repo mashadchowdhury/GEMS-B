@@ -1,5 +1,4 @@
 <?php
-//Interval Step
 
 /**
  * This file is part of the Carbon package.

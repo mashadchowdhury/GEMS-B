@@ -1,5 +1,5 @@
 <?php
-//Authorize
+
 namespace Illuminate\Auth\Middleware;
 
 use Closure;

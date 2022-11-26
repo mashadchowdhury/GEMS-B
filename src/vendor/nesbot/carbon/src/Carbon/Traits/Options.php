@@ -1,5 +1,4 @@
 <?php
-//Options
 
 /**
  * This file is part of the Carbon package.

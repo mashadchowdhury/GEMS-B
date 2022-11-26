@@ -1,5 +1,4 @@
 <?php
-//Serialization
 
 /**
  * This file is part of the Carbon package.

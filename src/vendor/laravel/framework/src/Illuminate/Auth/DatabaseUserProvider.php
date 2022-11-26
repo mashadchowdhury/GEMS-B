@@ -1,4 +1,5 @@
 <?php
+//Database User Provider
 
 namespace Illuminate\Auth;
 

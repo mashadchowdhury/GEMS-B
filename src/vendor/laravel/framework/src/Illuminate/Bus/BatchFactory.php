@@ -1,4 +1,5 @@
 <?php
+//Batch Factory
 
 namespace Illuminate\Bus;
 

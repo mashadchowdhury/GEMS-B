@@ -1,5 +1,8 @@
 <?php
 
+//Generic User 
+
+
 namespace Illuminate\Auth;
 
 use Illuminate\Contracts\Auth\Authenticatable as UserContract;

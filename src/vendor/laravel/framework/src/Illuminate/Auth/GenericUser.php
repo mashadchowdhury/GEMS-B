@@ -1,5 +1,5 @@
 <?php
-//eneric User 
+//Generic User 
 
 namespace Illuminate\Auth;
 

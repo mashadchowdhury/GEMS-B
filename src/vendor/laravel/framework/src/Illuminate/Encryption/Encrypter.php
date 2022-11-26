@@ -1,4 +1,5 @@
 <?php
+//Encrypter
 
 namespace Illuminate\Encryption;
 

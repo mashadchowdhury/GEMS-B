@@ -17,10 +17,30 @@ class regionsController extends Controller
    
     //TODO:
     function editRegions(Request $reg){
+        $data = DB::table('')->find($id);
+        return view("",['data'=>$data]);
+    }
 
+    function updateReqions(Request $req){
+        DB::table('')->where('id', $req->id)->update([
+            'name' => $req->name,
+            'numAccomidations' => $req->numAccomidations,
+            'numBookings' => $req->numBookings,
+            'roomsAvailable' => $req->roomsAvailable
+        ]);
+
+        return redirect("");
     }
     //TODO:
     function addRegions(Request $reg){
+        
+        DB::table('')->insert([
+            'name' => $req->name,
+            'numAccomidations' => $req->numAccomidations,
+            'numBookings' => $req->numBookings,
+            'roomsAvailable' => $req->roomsAvailable
+        ]);
 
+        return redirect("");
     }
 }

@@ -1,4 +1,5 @@
 <?php
+//Exception
 
 /**
  * This file is part of the Carbon package.

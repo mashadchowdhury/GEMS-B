@@ -16,7 +16,7 @@ class regionsController extends Controller
     }
    
     //TODO:
-    function editRegions(Request $reg){
+    function editRegions($id){
         $data = DB::table('')->find($id);
         return view("",['data'=>$data]);
     }

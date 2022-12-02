@@ -27,6 +27,14 @@ Route::get('/accommodations/accommodations.blade.php', function () {
     return view('accommodations/accommodations');
 });
 
+Route::get('/groups/groups.blade.php', function () {
+    return view('groups/groups');
+});
+
+Route::get('/booking/booking.blade.php', function () {
+    return view('booking/booking');
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

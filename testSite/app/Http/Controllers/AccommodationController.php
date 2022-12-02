@@ -15,7 +15,7 @@ class AccommodationController extends Controller
     public function index()
     {
         return view('accommodation.index', [
-            'accomodation' => Accomodation::with('user')->latest()->get(),
+            'accommodation' => Accommodation::with('user')->latest()->get(),
         ]);
     }
 
@@ -38,10 +38,22 @@ class AccommodationController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'message' => 'required|string|max:255',
+            'name_accommodation' => 'required|string',
+            'address' => 'required|string|max:128',
+            'email_accommodation' => 'required|string|max:96',
+            'room_type' => 'required|string',
+            'number_of_rooms' => 'integer',
+            'number_of_beds' => 'integer',
+            'ESS_support' => 'required|boolean',
+            'restaurant_available' => 'required|boolean',
+            'pets_allowed' => 'required|boolean',
+            'accessibility_available' => 'required|boolean',
+            'accessibility_wheelchair' => 'required|boolean',
+            'accessibility_walker' => 'required|boolean',
+            'region' => 'required|string',
         ]);
-        $request->user()->bookings()->create($validated);
-        return redirect(route('booking.index'));
+        $request->user()->accommodations()->create($validated);
+        return redirect(route('accommodation.index'));
     }
 
     /**
@@ -63,9 +75,9 @@ class AccommodationController extends Controller
      */
     public function edit(Accommodation $accommodation)
     {
-        $this->authorize('update', $booking);
-        return view('booking.edit', [
-            'booking' => $booking,
+        $this->authorize('update', $accommodation);
+        return view('accommodation.edit', [
+            'accommodation' => $accommodation,
         ]);
     }
 
@@ -78,7 +90,7 @@ class AccommodationController extends Controller
      */
     public function update(Request $request, Accommodation $accommodation)
     {
-        $this->authorize('update', $booking);
+        $this->authorize('update', $accommodation);
         $validated = $request->validate([
             'name_accommodation' => 'required|string',
             'address' => 'required|string|max:128',
@@ -89,9 +101,13 @@ class AccommodationController extends Controller
             'ESS_support' => 'required|boolean',
             'restaurant_available' => 'required|boolean',
             'pets_allowed' => 'required|boolean',
+            'accessibility_available' => 'required|boolean',
+            'accessibility_wheelchair' => 'required|boolean',
+            'accessibility_walker' => 'required|boolean',
+            'region' => 'required|string',
         ]);
-        $booking->update($validated);
-        return redirect(route('booking.index'));
+        $accommodation->update($validated);
+        return redirect(route('accommodation.index'));
     }
 
     /**
@@ -102,6 +118,8 @@ class AccommodationController extends Controller
      */
     public function destroy(Accommodation $accommodation)
     {
-        //
+        $this->authorize('delete', $accommodation);
+        $accommodation->delete();
+        return redirect(route('accommodation.index'));
     }
 }

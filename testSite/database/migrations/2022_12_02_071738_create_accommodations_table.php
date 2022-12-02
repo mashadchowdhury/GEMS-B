@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('accommodations', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('name_accommodation');
             $table->string('address',128);
             $table->string('email_accommodation',96);

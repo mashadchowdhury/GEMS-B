@@ -38,7 +38,6 @@ class GroupController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'message' => 'required|string|max:255',
             'name_group' => 'required|string',
             'booked' => 'required|boolean',
             'accommodation' => 'string',
@@ -79,7 +78,10 @@ class GroupController extends Controller
      */
     public function edit(Group $group)
     {
-        //
+        $this->authorize('update', $group);
+        return view('group.edit', [
+            'group' => $group,
+        ]);
     }
 
     /**
@@ -91,7 +93,26 @@ class GroupController extends Controller
      */
     public function update(Request $request, Group $group)
     {
-        //
+        $this->authorize('update', $group);
+        $validated = $request->validate([
+            'name_group' => 'required|string',
+            'booked' => 'required|boolean',
+            'accommodation' => 'string',
+            'name_primary_contact' => 'required|string',
+            'telephone_primary_contact' => 'required|integer|max:32',
+            'email_primary_contact' => 'required|string|max:96',
+            'name_secondary_contact' => 'required|string',
+            'telephone_secondary_contact' => 'required|integer|max:32',
+            'email_secondary_contact' => 'required|string|max:96',
+            'is_ESS_group' => 'required|boolean',
+            'group_count' => 'required|integer',
+            'adult_count' => 'required|integer',
+            'children_count' => 'required|integer',
+            'pet_count' => 'required|integer',
+            'need_accessibility' => 'required|boolean', 
+        ]);
+        $group->update($validated);
+        return redirect(route('group.index'));
     }
 
     /**
@@ -102,6 +123,8 @@ class GroupController extends Controller
      */
     public function destroy(Group $group)
     {
-        //
+        $this->authorize('delete', $group);
+        $group->delete();
+        return redirect(route('group.index'));
     }
 }

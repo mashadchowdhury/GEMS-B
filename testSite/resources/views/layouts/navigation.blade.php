@@ -15,13 +15,13 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('booking.index')" :active="request()->routeIs('booking.index')">
+                    <x-nav-link :href="route('region.index')" :active="request()->routeIs('region.index')">
                         {{ __('Regions') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('booking.index')" :active="request()->routeIs('booking.index')">
+                    <x-nav-link :href="route('accommodation.index')" :active="request()->routeIs('accommodation.index')">
                         {{ __('Accommodations') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('booking.index')" :active="request()->routeIs('booking.index')">
+                    <x-nav-link :href="route('group.index')" :active="request()->routeIs('group.index')">
                         {{ __('Groups') }}
                     </x-nav-link>
                     <x-nav-link :href="route('booking.index')" :active="request()->routeIs('booking.index')">
@@ -82,13 +82,13 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('booking.index')" :active="request()->routeIs('booking.index')">
+            <x-responsive-nav-link :href="route('region.index')" :active="request()->routeIs('region.index')">
                 {{ __('Regions') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('booking.index')" :active="request()->routeIs('booking.index')">
+            <x-responsive-nav-link :href="route('accommodation.index')" :active="request()->routeIs('accommodation.index')">
                 {{ __('Accommodations') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('booking.index')" :active="request()->routeIs('booking.index')">
+            <x-responsive-nav-link :href="route('group.index')" :active="request()->routeIs('group.index')">
                 {{ __('Groups') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('booking.index')" :active="request()->routeIs('booking.index')">

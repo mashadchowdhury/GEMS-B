@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\GroupController;
+use App\Http\Controllers\AccommodationController;
+use App\Http\Controllers\RegionController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,7 +34,7 @@ Route::resource('group', GroupController::class)
     ->only(['index', 'store', 'edit', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);
 
-Route::resource('accommodation', AccomodationController::class)
+Route::resource('accommodation', AccommodationController::class)
     ->only(['index', 'store', 'edit', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);
 

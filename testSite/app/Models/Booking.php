@@ -9,7 +9,10 @@ class Booking extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'message',
+        'accommodation',
+        'group',
+        'from_date',
+        'to_date',
     ];
 
     // protected $dispatchesEvents = [

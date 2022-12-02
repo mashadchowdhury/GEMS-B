@@ -37,7 +37,14 @@ class RegionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name_region' => 'required|string',
+            'amount_accommodations' => 'required|integer',
+            'amount_bookings' => 'required|integer',
+            'available_rooms' => 'required|integer',
+        ]);
+        $request->user()->regions()->create($validated);
+        return redirect(route('region.index'));
     }
 
     /**
@@ -59,7 +66,10 @@ class RegionController extends Controller
      */
     public function edit(Region $region)
     {
-        //
+        $this->authorize('update', $region);
+        return view('region.edit', [
+            'region' => $region,
+        ]);
     }
 
     /**
@@ -71,7 +81,15 @@ class RegionController extends Controller
      */
     public function update(Request $request, Region $region)
     {
-        //
+        $this->authorize('update', $region);
+        $validated = $request->validate([
+            'name_region' => 'required|string',
+            'amount_accommodations' => 'required|integer',
+            'amount_bookings' => 'required|integer',
+            'available_rooms' => 'required|integer',
+        ]);
+        $region->update($validated);
+        return redirect(route('region.index'));
     }
 
     /**
@@ -82,6 +100,8 @@ class RegionController extends Controller
      */
     public function destroy(Region $region)
     {
-        //
+        $this->authorize('delete', $region);
+        $region->delete();
+        return redirect(route('region.index'));
     }
 }

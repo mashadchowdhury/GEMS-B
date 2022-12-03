@@ -45,4 +45,6 @@ Route::resource('chirps', ChirpController::class)
     ->only(['index', 'store', 'edit', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);
 
+Route::view('/welcome.blade.php','welcome')->name('sendhome');
+
 require __DIR__.'/auth.php';

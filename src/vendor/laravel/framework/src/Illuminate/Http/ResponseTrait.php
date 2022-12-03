@@ -1,5 +1,5 @@
 <?php
-
+//Response Trait
 namespace Illuminate\Http;
 
 use Illuminate\Http\Exceptions\HttpResponseException;

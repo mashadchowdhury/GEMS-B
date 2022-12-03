@@ -1,4 +1,5 @@
 <?php
+//Response
 
 namespace Illuminate\Http;
 

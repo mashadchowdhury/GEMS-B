@@ -1,4 +1,5 @@
 <?php
+//Dispatcher
 
 namespace Illuminate\Events;
 

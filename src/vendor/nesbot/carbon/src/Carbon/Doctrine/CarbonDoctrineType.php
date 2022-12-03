@@ -1,4 +1,5 @@
 <?php
+//Carbon Doctrine Type
 
 /**
  * This file is part of the Carbon package.

@@ -1,4 +1,5 @@
 <?php
+//Bus Service Provider
 
 namespace Illuminate\Bus;
 

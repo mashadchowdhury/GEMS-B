@@ -1,4 +1,5 @@
 <?php
+//Require Password
 
 namespace Illuminate\Auth\Middleware;
 

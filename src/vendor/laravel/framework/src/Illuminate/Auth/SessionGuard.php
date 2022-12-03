@@ -1,4 +1,5 @@
 <?php
+//Session Guard
 
 namespace Illuminate\Auth;
 

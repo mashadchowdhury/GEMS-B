@@ -1,4 +1,5 @@
 <?php
+//Collection
 
 namespace Illuminate\Support;
 

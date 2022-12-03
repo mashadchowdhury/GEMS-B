@@ -1,4 +1,5 @@
 <?php
+//Enumerable
 
 namespace Illuminate\Support;
 

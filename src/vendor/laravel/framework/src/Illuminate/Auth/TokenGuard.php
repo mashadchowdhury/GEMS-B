@@ -1,4 +1,5 @@
 <?php
+//Token Guard
 
 namespace Illuminate\Auth;
 

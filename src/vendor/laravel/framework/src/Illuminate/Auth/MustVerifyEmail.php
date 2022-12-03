@@ -1,4 +1,5 @@
 <?php
+//Must Verify Email
 
 namespace Illuminate\Auth;
 

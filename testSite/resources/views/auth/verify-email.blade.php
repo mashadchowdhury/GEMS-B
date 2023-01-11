@@ -2,7 +2,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <img src="{{ asset('images/GEMSLogo.svg') }}" width="100" height="100" />
             </a>
         </x-slot>
 
@@ -21,16 +21,16 @@
                 @csrf
 
                 <div>
-                    <x-button>
+                    <x-primary-button>
                         {{ __('Resend Verification Email') }}
-                    </x-button>
+                    </x-primary-button>
                 </div>
             </form>
 
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
 
-                <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">
+                <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     {{ __('Log Out') }}
                 </button>
             </form>

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChirpController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +16,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('welcome');
 });
 
-Route::get('/booking/booking.blade.php', function () {
-    return view('booking/booking');
-});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/accommodations/accommodations.blade.php', function () {
     return view('accommodations/accommodations');
@@ -29,6 +31,18 @@ Route::get('/groups/groups.blade.php', function () {
     return view('groups/groups');
 });
 
-Route::get('/admin/admin.blade.php', function () {
-    return view('admin/admin');
+Route::get('/booking/booking.blade.php', function () {
+    return view('booking/booking');
 });
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+Route::resource('chirps', ChirpController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy'])
+    ->middleware(['auth', 'verified']);
+
+require __DIR__.'/auth.php';

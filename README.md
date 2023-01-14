@@ -45,7 +45,7 @@ Task: Video Editing : **Mohammed**
 
 IP Agreement: [link](https://docs.google.com/document/d/1r8ovwDyKNObXJOkx97MzuQUwNF7pO3qw4YOi225d4Fo/edit?usp=sharing)
 
-~~*Hard deadline: IP Agreement* : Finished~~
+~~*Deadline: IP Agreement* : Finished~~
 ***
 
 
@@ -54,14 +54,14 @@ IP Agreement: [link](https://docs.google.com/document/d/1r8ovwDyKNObXJOkx97MzuQU
 
 
 ### Weekly Checkpoint: October 14th
-~~*Hard deadline: Requirements Presentation* (friday 9:34 am) : Finished~~
+~~*Deadline: Requirements Presentation* (friday 9:34 am) : Finished~~
 
-~~*Hard deadline: Group Evaluations* : Finished~~
+~~*Deadline: Group Evaluations* : Finished~~
 ***
 
 
 ### Weekly Checkpoint: October 21st
-~~*Hard deadline: Requirements Report* : Finished~~
+~~*Deadline: Requirements Report* : Finished~~
 
 ***
 
@@ -73,29 +73,12 @@ Task: Prototype Website UI
 Task: Dummy database
 
 Task: Gantt Chart
-***
-
-### Weekly Checkpoint: November 4th
-
-***
-
-### Weekly Checkpoint: November 11th
-**Reading Week**
-***
-
-### Weekly Checkpoint: November 18th
-
-***
-
-### Weekly Checkpoint: November 25th
-
-***
 # Milestone 2: Peer-Testing #1
 ### Weekly Checkpoint: December 2nd
 
-*Hard deadline: Peer Testing Report #1*
+*~~Deadline: Peer Testing Report #1 : Finished~~*
 
-*Hard deadline: Prototype Video*
+*~~Deadline: Prototype Video : Finished~~*
 
 ***
 ***

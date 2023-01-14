@@ -10,8 +10,11 @@ use Illuminate\Support\Facades\DB;
 //FUNCTION DESCRIPTIONS:
 
 //getBookings gets all groups that have been booked
+
 //editBookings brings the user to the edit bookings screen and displays all data in the data base for the booking
+
 //updateBookings updates the data entered on the edit
+
 //createBookings adds a bookings into the database
 
 class bookingController extends Controller
@@ -43,7 +46,6 @@ class bookingController extends Controller
     }
 
     //TODO: figure out id creation system
-    
     //create a booking
     function createBooking(Request $req){
         DB::table('')->insert([

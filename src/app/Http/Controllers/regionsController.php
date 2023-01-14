@@ -9,8 +9,8 @@ use Illuminate\Support\Facades\DB;
 
 //FUNCTION DESCRIPTIONS:
 
-//getRegions gets all groups that have been booked
-//editRegions brings the user to the edit bookings screen and displays all data in the data base for the given id
+//getRegions gets all regions that have been booked
+//editRegions brings the user to the edit regions screen and displays all data in the data base for the region
 //updateRegions updates the data entered on the edit
 //addRegions adds a regions into the database
 

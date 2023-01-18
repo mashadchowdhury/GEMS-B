@@ -1,4 +1,5 @@
 <?php
+//Abstract Translator
 
 /**
  * This file is part of the Carbon package.

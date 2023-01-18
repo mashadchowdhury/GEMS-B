@@ -1,4 +1,5 @@
 <?php
+//Eloquent User Provider
 
 namespace Illuminate\Auth;
 

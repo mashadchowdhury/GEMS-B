@@ -1,4 +1,5 @@
 <?php
+//Password Reset
 
 namespace Illuminate\Auth\Events;
 

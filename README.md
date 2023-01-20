@@ -72,7 +72,6 @@ Task: Prototype Website UI
 
 Task: Dummy database
 
-Task: Gantt Chart
 # Milestone 2: Peer-Testing #1
 ### Weekly Checkpoint: December 2nd
 

@@ -55,8 +55,8 @@ class GroupController extends Controller
             'need_accessibility' => 'required|boolean', 
         ]);
 
-        $request->user()->chirps()->create($validated);
-        return redirect(route('chirps.index'));
+        $request->user()->groups()->create($validated);
+        return redirect(route('groups.index'));
     }
 
     /**

@@ -1,11 +1,11 @@
 <x-app-layout>
-    <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
+    <div class="block border-x-4 border-indigo-500 rounded-sm max-w-2xl mx-52 p-4 sm:p-6 lg:p-8">
         <form method="POST" action="{{ route('group.store') }}">
             @csrf
             <label for="name_group">Group Name:</label><br>
             <input 
                 type="text" 
-                id="name_group" 
+                id="name_group"     
                 name="name_group" 
                 placeholder="{{ __('Eg: South Bend EMS') }}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">

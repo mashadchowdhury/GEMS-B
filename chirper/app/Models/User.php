@@ -42,10 +42,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function chirps()
-    {
+    public function regions(){
+        return $this->hasMany(Region::class);
+    }
 
-        return $this->hasMany(Chirp::class);
+    public function accommodations(){
+        return $this->hasMany(Accommodation::class);
+    }
 
+    public function groups(){
+        return $this->hasMany(Group::class);
+    }
+
+    public function bookings(){
+        return $this->hasMany(Booking::class);
     }
 }

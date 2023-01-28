@@ -1,4 +1,29 @@
 <x-app-layout>
+    <head>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+          <!-- Javascript -->
+        <script>
+            $(function() {
+                var availableTutorials  =  [
+                "ActionScript",
+                "Bootstrap",
+                "C",
+                "C++",
+                ];
+                $( "#automplete-1" ).autocomplete({
+                source: availableTutorials
+                });
+            });
+        </script>
+    </head>
+    <div class = "ui-widget">
+         <p>Type "a" or "s"</p>
+         <label for = "automplete-1">Tags: </label>
+         <input id = "automplete-1" class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+    </div>
     <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
         <form method="POST" action="{{ route('region.store') }}">
             @csrf

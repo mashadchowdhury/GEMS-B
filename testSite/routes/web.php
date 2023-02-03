@@ -5,6 +5,7 @@ use App\Http\Controllers\GroupController;
 use App\Http\Controllers\AccommodationController;
 use App\Http\Controllers\RegionController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,5 +48,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+//need to fix this, look into controller docs
+Route::get('/autoComplete',[SearchController::class, 'getAutoComplete'])->name('autoComplete');
 
 require __DIR__.'/auth.php';

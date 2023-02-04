@@ -1,6 +1,6 @@
 
 <?php
-//h
+//channels
 use Illuminate\Support\Facades\Broadcast;
 
 /*

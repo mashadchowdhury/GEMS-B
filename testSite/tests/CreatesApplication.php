@@ -1,5 +1,5 @@
 <?php
-//create application
+//create application php
 namespace Tests;
 
 use Illuminate\Contracts\Console\Kernel;

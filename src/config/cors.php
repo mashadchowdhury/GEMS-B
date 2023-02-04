@@ -1,4 +1,5 @@
 <?php
+//CORS Configuration
 
 return [
 

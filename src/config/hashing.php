@@ -1,4 +1,5 @@
 <?php
+//Hashing
 
 return [
 

@@ -1,4 +1,51 @@
 <x-app-layout>
+    <head>
+        <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+          <!-- Javascript -->
+        <script>
+            var path = "{{ route('autoComplete') }}";
+            $(function() {
+                var availableTutorials  =  [
+                "ActionScript",
+                "Bootstrap",
+                "C",
+                "C++",
+                ];
+                $( "#automplete-1" ).autocomplete({
+                source: function( request, response){
+                    $.ajax( {
+                        url: "{{ route('autoComplete') }}",
+                        dataType: "json",
+                        data: {
+                            term: request.term
+                        },
+                        success: function( data ) {
+                            console.log(JSON.stringify(data));
+                            response( data );
+                        }
+                    }    );
+                }
+                } );
+               
+            });
+        </script>
+    </head>
+    <form method="post" action="#">
+        @csrf
+         <div class="ui-widget">
+            <p>Type "a" or "s"</p>
+            <label for = "automplete-1">Tags: </label>
+            <input id = "automplete-1" class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+        </div>
+    </form>
+   
     <div class="fixed left px-5 overflow-hidden bg-white shadow sm:rounded-lg">
     <!-- Left Sidebar -->
         Sort options
@@ -104,6 +151,7 @@
             </div>
         </div>
     </div>
+
     <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
         <!-- Right-side Form -->
         <form method="POST" action="{{ route('region.store') }}">

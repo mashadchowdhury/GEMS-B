@@ -3,7 +3,6 @@
         <form method="POST" action="{{ route('group.update', $group) }}">
             @csrf
             
-            
             @method('patch')
             <label for="name_group">Group Name:</label><br>
             <input 

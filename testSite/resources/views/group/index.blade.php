@@ -3,6 +3,7 @@
         <form method="POST" action="{{ route('group.store') }}">
             @csrf
             
+            
             <label for="name_group">Group Name:</label><br>
             <input 
                 type="text" 

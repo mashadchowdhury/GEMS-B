@@ -25,8 +25,8 @@ class SearchController extends Controller
         //looks like data isnt getting saved to the data base for both groups and accomidations
 
         //need to figure out what the output from this is
-        //$res2 = Accommidation::select('name_accommodation as value')->where('name_accommidation','like','%'.$search.'%')->get();
-        //$res3 = Group::select('name_group as value')->where('name_group','like','%'.$search.'%')->get();
+        //$result = Accommidation::select('name_accommodation as value')->where('name_accommidation','like','%'.$search.'%')->get();
+        //$result = Group::select('name_group')->where('name_group','like','%'.$search.'%')->get();
         
 
         //need to figure out how to merge the results together

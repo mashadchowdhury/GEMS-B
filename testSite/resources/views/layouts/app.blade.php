@@ -32,4 +32,7 @@
             </main>
         </div>
     </body>
+    <footer>
+        <!-- Footer Content -->
+    </footer>
 </html>

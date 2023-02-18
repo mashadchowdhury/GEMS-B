@@ -18,6 +18,7 @@ class Group extends Model
         'name_secondary_contact',
         'telephone_secondary_contact',
         'email_secondary_contact',
+        'is_ESS_group',
         'group_count',
         'adult_count',
         'children_count',

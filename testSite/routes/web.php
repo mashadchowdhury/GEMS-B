@@ -51,5 +51,6 @@ Route::middleware('auth')->group(function () {
 
 //need to fix this, look into controller docs
 Route::get('/autoComplete',[SearchController::class, 'getAutoComplete'])->name('autoComplete');
+Route::post('searchDB',[SearchController::class, 'searchDB'])->name('searchDB');
 
 require __DIR__.'/auth.php';

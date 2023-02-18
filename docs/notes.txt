@@ -83,8 +83,6 @@ added notes
 
 
 
-some-stuff
-some more stuff
 
 
 
@@ -94,24 +92,5 @@ some more stuff
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+stuff
 end of notes

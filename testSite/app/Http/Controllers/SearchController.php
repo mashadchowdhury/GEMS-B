@@ -38,4 +38,21 @@ class SearchController extends Controller
 
 
     }
+
+    public function searchDB(Request $request){
+        
+        $search = $request->input('automplete-1');
+        //$search = $request->term;
+
+        //possible to get more than one row this way need to deal with that
+        //possible solution, add code to detect this here and route to a different page
+        //will also need to figure out a way to handle which table to search and return the correct view
+
+        //$result = Region::where('name_region','like','%'.$search.'%')->first();
+        
+        //$result = Region::where('name_region',$search)->first();
+        $result = Region::find(2);
+
+        return view('search.index', ['searchResult' => $result]);
+    }
 }

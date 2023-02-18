@@ -68,11 +68,11 @@
                     </x-nav-link>
                 </div>
             </div>
-            <form method="post" action="#">
+            <form method="post" action="{{ route('searchDB') }}">
                 @csrf
                 <div class="ui-widget">
-                    <label for = "automplete-1">Tags: </label>
-                    <input id = "automplete-1" class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                    <label for = "automplete-1">Search: </label>
+                    <input type="text" id = "automplete-1" class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 </div>
             </form>
             <!-- Settings Dropdown -->

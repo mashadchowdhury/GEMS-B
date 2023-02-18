@@ -4,6 +4,7 @@
             @csrf            
             <label for="name_accommodation">Name of Accommodation:</label><br>
             <input 
+            
                 type="text" 
                 id="name_accommodation" 
                 name="name_accommodation" 

@@ -3,6 +3,7 @@
         <form method="POST" action="{{ route('chirps.update', $chirp) }}">
             @csrf
             
+            
             @method('patch')
             <textarea
                 name="message"

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Providers;
-
 use App\Actions\Jetstream\DeleteUser;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Jetstream\Jetstream;

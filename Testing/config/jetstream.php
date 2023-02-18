@@ -2,7 +2,6 @@
 
 use Laravel\Jetstream\Features;
 use Laravel\Jetstream\Http\Middleware\AuthenticateSession;
-
 return [
 
     /*

@@ -14,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('welcome');
 });
-
 Route::get('/booking/booking.blade.php', function () {
     return view('booking/booking');
 });
@@ -29,6 +28,13 @@ Route::get('/groups/groups.blade.php', function () {
     return view('groups/groups');
 });
 
-Route::get('/admin/admin.blade.php', function () {
-    return view('admin/admin');
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 });

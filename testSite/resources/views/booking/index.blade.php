@@ -2,7 +2,6 @@
     <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
         <form method="POST" action="{{ route('booking.store') }}">
             @csrf
-            
             <label for="accommodation">Accommodation:</label><br>
             <input 
                 type="text" 
@@ -11,6 +10,7 @@
                 placeholder="{{ __('Eg: Hyatt Place') }}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
+            
             <label for="group">Group:</label><br>
             <input 
                 type="text" 

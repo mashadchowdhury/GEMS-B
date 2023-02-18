@@ -4,7 +4,6 @@
     'maxWidth' => '2xl'
 ])
 
-
 @php
 $maxWidth = [
     'sm' => 'sm:max-w-sm',

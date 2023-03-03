@@ -48,10 +48,10 @@ class SearchController extends Controller
         //possible solution, add code to detect this here and route to a different page
         //will also need to figure out a way to handle which table to search and return the correct view
 
-        //$result = Region::where('name_region','like','%'.$search.'%')->first();
+        $result = Region::where('name_region','like','%'.$search.'%')->first();
         
         //$result = Region::where('name_region',$search)->first();
-        $result = Region::find(2);
+        //$result = Region::find(2);
 
         return view('search.index', ['searchResult' => $result]);
     }

@@ -43,10 +43,10 @@ class GroupController extends Controller
             'accommodation' => 'string',
             'name_primary_contact' => 'required|string',
             'telephone_primary_contact' => 'required|string|max:32',
-            'email_primary_contact' => 'required|email|max:96',
+            'email_primary_contact' => 'required|string|max:96',
             'name_secondary_contact' => 'required|string',
             'telephone_secondary_contact' => 'required|string|max:32',
-            'email_secondary_contact' => 'required|email|max:96',
+            'email_secondary_contact' => 'required|string|max:96',
             'is_ESS_group' => 'required|boolean',
             'group_count' => 'required|integer',
             'adult_count' => 'required|integer',
@@ -56,7 +56,7 @@ class GroupController extends Controller
         ]);
 
         $request->user()->groups()->create($validated);
-        return redirect(route('groups.index'));
+        return redirect(route('group.index'));
     }
 
     /**

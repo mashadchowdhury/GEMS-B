@@ -11,12 +11,7 @@
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
                 </div>
-                <a href="./accommodations/accommodations.blade.php" class="text-sm text-gray-700 dark:text-gray-500 underline">Accommodations</a>
-                <a href="./groups/groups.blade.php" class="text-sm text-gray-700 dark:text-gray-500 underline">Groups</a>
-                <a href="./booking/booking.blade.php" class="text-sm text-gray-700 dark:text-gray-500 underline">Bookings</a>
             </div>
-
         </div>
     </div>
 </x-app-layout>
-

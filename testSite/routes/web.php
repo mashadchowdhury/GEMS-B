@@ -1,8 +1,12 @@
 <?php
 
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\GroupController;
+use App\Http\Controllers\AccommodationController;
+use App\Http\Controllers\RegionController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ChirpController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,17 +27,21 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/accommodations/accommodations.blade.php', function () {
-    return view('accommodations/accommodations');
-});
+Route::resource('booking', BookingController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy'])
+    ->middleware(['auth', 'verified']);
 
-Route::get('/groups/groups.blade.php', function () {
-    return view('groups/groups');
-});
+Route::resource('group', GroupController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy'])
+    ->middleware(['auth', 'verified']);
 
-Route::get('/booking/booking.blade.php', function () {
-    return view('booking/booking');
-});
+Route::resource('accommodation', AccommodationController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('region', RegionController::class)
+    ->only(['index', 'store', 'edit', 'update', 'destroy'])
+    ->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -41,8 +49,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('chirps', ChirpController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy'])
-    ->middleware(['auth', 'verified']);
+//need to fix this, look into controller docs
+Route::get('/autoComplete',[SearchController::class, 'getAutoComplete'])->name('autoComplete');
+Route::post('searchDB',[SearchController::class, 'searchDB'])->name('searchDB');
 
 require __DIR__.'/auth.php';

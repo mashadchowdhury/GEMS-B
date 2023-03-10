@@ -41,8 +41,8 @@ class BookingController extends Controller
             'message' => 'required|string|max:255',
             'accommodation' => 'required|string',
             'group' => 'required|string',
-            'from_date' => 'required|dateTime',
-            'to_date' => 'required|dateTime',
+            'from_date' => 'required|date',
+            'to_date' => 'required|date',
         ]);
         $request->user()->bookings()->create($validated);
         return redirect(route('booking.index'));

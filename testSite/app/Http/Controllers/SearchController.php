@@ -25,16 +25,16 @@ class SearchController extends Controller
         //looks like data isnt getting saved to the data base for both groups and accomidations
 
         //need to figure out what the output from this is
-        //$result = Accommidation::select('name_accommodation as value')->where('name_accommidation','like','%'.$search.'%')->get();
-        //$result = Group::select('name_group')->where('name_group','like','%'.$search.'%')->get();
-        
+        //OUTPUT IS COLLECTIONS INSTANCE
 
-        //need to figure out how to merge the results together
-
-        //this may work, dont remember
-        //$result = array_merge($res,$res3); 
+        //accommidations gives error 500
+        // $result2 = Accommidation::select('name_accommodation as value')->where('name_accommidation','like','%'.$search.'%')->get();
+        $result3 = Group::select('name_group as value')->where('name_group','like','%'.$search.'%')->get();
         
-        return response()->json($result); 
+        //adding in accommidations should be as simple as concating onto the end of merged
+        $merged = $result->concat($result3);
+        
+        return response()->json($merged);
 
 
     }
@@ -48,11 +48,14 @@ class SearchController extends Controller
         //possible solution, add code to detect this here and route to a different page
         //will also need to figure out a way to handle which table to search and return the correct view
 
-        $result = Region::where('name_region','like','%'.$search.'%')->first();
+        //may want to look into narrowing down search more. first instead of get could be one way.
+        $result = Region::where('name_region','like','%'.$search.'%')->get();
+        // $result2 = Accommodation::where('name_accommodation','like','%'.$search.'%');
+        $result3 = Group::where('name_group','like','%'.$search.'%')->get();
         
-        //$result = Region::where('name_region',$search)->first();
-        //$result = Region::find(2);
+        //$combined = $result->concat($result3);
 
-        return view('search.index', ['searchResult' => $result]);
+        // return view('search.index', ['searchResult' => $result]);
+        return view('search.index', ['region' => $result, 'group' => $result3]);
     }
 }

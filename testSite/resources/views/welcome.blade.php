@@ -125,8 +125,37 @@
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>
+
                 </div>
+                <div style="border: 2px solid #f05340; padding: 20px; background-color: #fff;">
+                    <h1 style="color: #f05340;">Contact Us</h1>
+                    <form action="/contact" method="POST">
+                        @csrf
+                        <div style="display: flex; flex-direction: column;">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+
+                            <label for="number_of_people">Number of People</label>
+                            <input type="number" id="number_of_people" name="number_of_people" required>
+
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company" required>
+
+                            <label for="accommodation">Accommodation</label>
+                            <input type="text" id="accommodation" name="accommodation" required>
+
+                            <label for="summary">Summary</label>
+                            <textarea id="summary" name="summary" required style="height: 150px;"></textarea>
+
+                            <button type="submit" style="background-color: #f05340; color: #fff; border: none; padding: 10px 20px; border-radius: 5px;">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
+
     </body>
 </html>

@@ -141,9 +141,7 @@
                             </x-dropdown>
                             @endif
                         </div>
-                        <p class="mt-4 text-lg text-gray-900">{{ 
-                            $booking->message 
-                        }}</p>
+                        
                     </div>
                 </div>
             @endforeach

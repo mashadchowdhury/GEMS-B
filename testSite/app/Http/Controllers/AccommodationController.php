@@ -37,21 +37,22 @@ class AccommodationController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'name_accommodation' => 'required|string',
-            'address' => 'required|string|max:128',
-            'email_accommodation' => 'required|string|max:96',
-            'room_type' => 'required|string',
-            'number_of_rooms' => 'integer',
-            'number_of_beds' => 'integer',
-            'ESS_support' => 'required|boolean',
-            'restaurant_available' => 'required|boolean',
-            'pets_allowed' => 'required|boolean',
-            'accessibility_available' => 'required|boolean',
-            'accessibility_wheelchair' => 'required|boolean',
-            'accessibility_walker' => 'required|boolean',
-            'region' => 'required|string',
-        ]);
+        // $validated = $request->validate([
+        //     'name_accommodation' => 'required|string',
+        //     'address' => 'required|string|max:128',
+        //     'email_accommodation' => 'required|string|max:96',
+        //     'room_type' => 'required|string',
+        //     'number_of_rooms' => 'integer',
+        //     'number_of_beds' => 'integer',
+        //     'ESS_support' => 'required|boolean',
+        //     'restaurant_available' => 'required|boolean',
+        //     'pets_allowed' => 'required|boolean',
+        //     'accessibility_available' => 'required|boolean',
+        //     'accessibility_wheelchair' => 'required|boolean',
+        //     'accessibility_walker' => 'required|boolean',
+        //     'region' => 'required|string',
+        // ]);
+        $validated = $request->all();
         $request->user()->accommodations()->create($validated);
         return redirect(route('accommodation.index'));
     }

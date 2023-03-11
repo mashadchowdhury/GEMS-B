@@ -48,4 +48,12 @@
         </p>
         @endforeach
     </div>
+    <div>
+        @foreach ($accommodation as $accommodation)
+        <p>
+            <br>Accommodation Name: 
+            <b>{{$accommodation->name_accommodation}}</b>
+        </p>
+        @endforeach
+    </div>
 </x-app-layout>

@@ -28,11 +28,11 @@ class SearchController extends Controller
         //OUTPUT IS COLLECTIONS INSTANCE
 
         //accommidations gives error 500
-        // $result2 = Accommidation::select('name_accommodation as value')->where('name_accommidation','like','%'.$search.'%')->get();
+        $result2 = Accommodation::select('name_accommodation as value')->where('name_accommodation','like','%'.$search.'%')->get();
         $result3 = Group::select('name_group as value')->where('name_group','like','%'.$search.'%')->get();
         
         //adding in accommidations should be as simple as concating onto the end of merged
-        $merged = $result->concat($result3);
+        $merged = $result->concat($result2)->concat($result3);
         
         return response()->json($merged);
 
@@ -50,12 +50,12 @@ class SearchController extends Controller
 
         //may want to look into narrowing down search more. first instead of get could be one way.
         $result = Region::where('name_region','like','%'.$search.'%')->get();
-        // $result2 = Accommodation::where('name_accommodation','like','%'.$search.'%');
+        $result2 = Accommodation::where('name_accommodation','like','%'.$search.'%')->get();
         $result3 = Group::where('name_group','like','%'.$search.'%')->get();
         
         //$combined = $result->concat($result3);
 
-        // return view('search.index', ['searchResult' => $result]);
-        return view('search.index', ['region' => $result, 'group' => $result3]);
+        
+        return view('search.index', ['region' => $result, 'group' => $result3, 'accommodation' => $result2]);
     }
 }

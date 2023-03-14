@@ -3,7 +3,7 @@
         <div class="relative flex-auto m-5 p-5 w-full h-full overflow-y-auto overflow-x-hidden rounded-lg border border-gray-200 shadow-md">
             <!-- Main Body -->
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
-                <thead class="bg-gray-50 font-medium text-gray-900">
+                <thead class="bg-gray-50">
                 <tr>
                     <th scope="col" class="px-1 py-4">Accommodation</th>
                     <th scope="col" class="px-1 py-4">Region Location</th>

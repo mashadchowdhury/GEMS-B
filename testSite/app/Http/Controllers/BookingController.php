@@ -38,7 +38,6 @@ class BookingController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'message' => 'required|string|max:255',
             'accommodation' => 'required|string',
             'group' => 'required|string',
             'from_date' => 'required|dateTime',
@@ -84,7 +83,6 @@ class BookingController extends Controller
     {
         $this->authorize('update', $booking);
         $validated = $request->validate([
-            'message' => 'required|string|max:255',
             'accommodation' => 'required|string',
             'group' => 'required|string',
             'from_date' => 'required|dateTime',

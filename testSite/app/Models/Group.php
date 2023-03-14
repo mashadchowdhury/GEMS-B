@@ -11,7 +11,7 @@ class Group extends Model
     protected $fillable = [
         'name_group',
         'booked',
-        'accommodation',
+        'name_accommodation',
         'name_primary_contact',
         'telephone_primary_contact',
         'email_primary_contact',

@@ -28,7 +28,7 @@ return new class extends Migration
             $table->boolean('accessibility_available');
             $table->boolean('accessibility_wheelchair');
             $table->boolean('accessibility_walker');
-            $table->string('region');
+            $table->string('name_region');
             $table->timestamps();
         });
     }

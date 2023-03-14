@@ -358,16 +358,16 @@
             <label for="accommodation">Accommodation:</label><br>
             <input 
                 type="text" 
-                id="accommodation" 
-                name="accommodation" 
+                id="name_accommodation" 
+                name="name_accommodation" 
                 placeholder="{{ __('Eg: Hyatt Place') }}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="group">Group:</label><br>
             <input 
                 type="text" 
-                id="group" 
-                name="group" 
+                id="name_group" 
+                name="name_group" 
                 placeholder="{{ __('Eg: Penticton Fire Dept.') }}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>

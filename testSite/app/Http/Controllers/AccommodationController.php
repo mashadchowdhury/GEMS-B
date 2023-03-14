@@ -50,7 +50,7 @@ class AccommodationController extends Controller
             'accessibility_available' => 'required|boolean',
             'accessibility_wheelchair' => 'required|boolean',
             'accessibility_walker' => 'required|boolean',
-            'region' => 'required|string',
+            'name_region' => 'required|string',
         ]);
         $request->user()->accommodations()->create($validated);
         return redirect(route('accommodation.index'));
@@ -104,7 +104,7 @@ class AccommodationController extends Controller
             'accessibility_available' => 'required|boolean',
             'accessibility_wheelchair' => 'required|boolean',
             'accessibility_walker' => 'required|boolean',
-            'region' => 'required|string',
+            'name_region' => 'required|string',
         ]);
         $accommodation->update($validated);
         return redirect(route('accommodation.index'));

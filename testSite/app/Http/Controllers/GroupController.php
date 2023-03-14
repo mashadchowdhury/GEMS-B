@@ -40,7 +40,7 @@ class GroupController extends Controller
         $validated = $request->validate([
             'name_group' => 'required|string',
             'booked' => 'required|boolean',
-            'accommodation' => 'string',
+            'name_accommodation' => 'string',
             'name_primary_contact' => 'required|string',
             'telephone_primary_contact' => 'required|integer|max:32',
             'email_primary_contact' => 'required|string|max:96',
@@ -97,7 +97,7 @@ class GroupController extends Controller
         $validated = $request->validate([
             'name_group' => 'required|string',
             'booked' => 'required|boolean',
-            'accommodation' => 'string',
+            'name_accommodation' => 'string',
             'name_primary_contact' => 'required|string',
             'telephone_primary_contact' => 'required|integer|max:32',
             'email_primary_contact' => 'required|string|max:96',

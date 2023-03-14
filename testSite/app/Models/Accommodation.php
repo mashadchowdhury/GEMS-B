@@ -21,7 +21,7 @@ class Accommodation extends Model
         'accessibility_available',
         'accessibility_wheelchair',
         'accessibility_walker',
-        'region',
+        'name_region',
     ];
 
     public function user(){

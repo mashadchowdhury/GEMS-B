@@ -15,24 +15,16 @@
                 @foreach ($region as $region)
                 <tr class="hover:bg-gray-50">
                     <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
-                        <div class="text-sm">
-                            <div>{{$region->name_region}}</div>
-                        </div>
+                        <div class="text-sm">{{$region->name_region}}</div>
                     </th>
-                    <td class="px-6 py-4">
-                        <span class="text-sm">
-                            <div class="font-medium text-gray-700">{{$region->amount_accommodations}}</div>
-                        </span>
+                    <td class="px-6 py-4 text-sm font-medium text-gray-700">
+                        <div>{{$region->amount_accommodations}}</div>
                     </td>
-                    <td class="px-6 py-4">
-                        <span class="text-sm">
-                            <div class="font-medium text-gray-700">{{$region->amount_bookings}}</div>
-                        </span>
+                    <td class="px-6 py-4 text-sm font-medium text-gray-700">
+                        <div>{{$region->amount_bookings}}</div>
                     </td>
-                    <td class="px-6 py-4">
-                        <span class="text-sm">
-                            <div class="font-medium text-gray-700">{{$region->available_rooms}}</div>
-                        </span>
+                    <td class="px-6 py-4 text-sm font-medium text-gray-700">
+                        <div>{{$region->available_rooms}}</div>
                     </td>
                     <td class="px-6 py-4">
                     <div class="flex justify-end">
@@ -130,7 +122,7 @@
             </div>
         </div>
         
-        <span  class="">
+        <span  class="p-4 text-sm bg-white rounded-lg border border-gray-200 shadow-md">
             <!-- Pop-up Form -->
             <form method="POST" action="{{ route('region.store') }}">
                 @csrf

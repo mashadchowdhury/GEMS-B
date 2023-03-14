@@ -5,45 +5,64 @@
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
                 <thead class="bg-gray-50 font-medium text-gray-900">
                 <tr>
-                    <th scope="col" class="px-6 py-4">Accommodation</th>
-                    <th scope="col" class="px-6 py-4">Region Location</th>
-                    <th scope="col" class="px-6 py-4">Address</th>
-                    <th scope="col" class="px-6 py-4">Email</th>
-                    <th scope="col" class="px-6 py-4">Room Type</th>
-                    <th scope="col" class="px-6 py-4">Number of Rooms</th>
-                    <th scope="col" class="px-6 py-4">Number of Beds</th>
-                    <th scope="col" class="px-6 py-4">ESS Support</th>
-                    <th scope="col" class="px-6 py-4">Nearby Restaurants</th>
-                    <th scope="col" class="px-6 py-4">Pet-friendly</th>
-                    <th scope="col" class="px-6 py-4">Disability Access</th>
-                    <th scope="col" class="px-6 py-4">Wheelchair Access</th>
-                    <th scope="col" class="px-6 py-4">Walker Access</th>
+                    <th scope="col" class="px-1 py-4">Accommodation</th>
+                    <th scope="col" class="px-1 py-4">Region Location</th>
+                    <th scope="col" class="px-1 py-4">Address</th>
+                    <th scope="col" class="px-1 py-4">Email</th>
+                    <th scope="col" class="px-1 py-4">Room Type</th>
+                    <th scope="col" class="px-1 py-4">Number of Rooms</th>
+                    <th scope="col" class="px-1 py-4">Number of Beds</th>
+                    <th scope="col" class="px-1 py-4">ESS Support</th>
+                    <th scope="col" class="px-1 py-4">Nearby Restaurants</th>
+                    <th scope="col" class="px-1 py-4">Pet-friendly</th>
+                    <th scope="col" class="px-1 py-4">Disability Access</th>
+                    <th scope="col" class="px-1 py-4">Wheelchair Access</th>
+                    <th scope="col" class="px-1 py-4">Walker Access</th>
                 </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100 border-t border-gray-100">
                 @foreach ($accommodation as $accommodation)
                 <tr class="hover:bg-gray-50">
-                    <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
-                        <div class="text-sm">
-                            <div>{{$accommodation->name_accommodation}}</div>
-                        </div>
+                    <th class="flex gap-3 px-1 py-4 font-normal text-gray-900">
+                        <div class="text-sm">{{$accommodation->name_accommodation}}</div>
                     </th>
-                    <td class="px-6 py-4">
-                        <span class="text-sm">
-                            <div class="font-medium text-gray-700">{{$accommodation->amount_accommodations}}</div>
-                        </span>
+                    <td class="px-1 py-4 text-sm font-medium text-gray-700">
+                        <div>{{$accommodation->name_region}}</div>
                     </td>
-                    <td class="px-6 py-4">
-                        <span class="text-sm">
-                            <div class="font-medium text-gray-700">{{$accommodation->amount_bookings}}</div>
-                        </span>
+                    <td class="px-1 py-4 text-sm font-medium text-gray-700">
+                        <div>{{$accommodation->address}}</div>
                     </td>
-                    <td class="px-6 py-4">
-                        <span class="text-sm">
-                            <div class="font-medium text-gray-700">{{$accommodation->available_rooms}}</div>
-                        </span>
+                    <td class="px-1 py-4 text-sm font-medium text-gray-700">
+                        <div>{{$accommodation->email_accommodation}}</div>
                     </td>
-                    <td class="px-6 py-4">
+                    <td class="px-1 py-4 text-sm font-medium text-gray-700">
+                        <div>{{$accommodation->room_type}}</div>
+                    </td>
+                    <td class="px-1 py-4 text-sm font-medium text-gray-700">
+                        <div>{{$accommodation->number_of_rooms}}</div>
+                    </td>
+                    <td class="px-1 py-4 text-sm font-medium text-gray-700">
+                        <div>{{$accommodation->number_of_beds}}</div>
+                    </td>
+                    <td class="px-1 py-4 text-sm font-medium text-gray-700">
+                        <div>{{$accommodation->ESS_support}}</div>
+                    </td>
+                    <td class="px-1 py-4 text-sm font-medium text-gray-700">
+                        <div>{{$accommodation->restaurant_available}}</div>
+                    </td>
+                    <td class="px-1 py-4 text-sm font-medium text-gray-700">
+                        <div>{{$accommodation->pets_allowed}}</div>
+                    </td>
+                    <td class="px-1 py-4 text-sm font-medium text-gray-700">
+                        <div>{{$accommodation->accessibility_available}}</div>
+                    </td>
+                    <td class="px-1 py-4 text-sm font-medium text-gray-700">
+                        <div>{{$accommodation->accessibility_wheelchair}}</div>
+                    </td>
+                    <td class="px-1 py-4 text-sm font-medium text-gray-700">
+                        <div>{{$accommodation->accessibility_walker}}</div>
+                    </td>
+                    <td class="px-1 py-4">
                     <div class="flex justify-end">
                         @if ($accommodation->user->is(auth()->user()))
                         <x-dropdown>
@@ -139,7 +158,7 @@
             </div>
         </div>
         
-        <span  class="">
+        <span  class="p-4 text-sm bg-white rounded-lg border border-gray-200 shadow-md">
             <!-- Pop-up Form -->
             <form method="POST" action="{{ route('accommodation.store') }}">
                 @csrf
@@ -243,54 +262,5 @@
                 <x-primary-button class="mt-4">{{ __('Create Accommodation') }}</x-primary-button>
             </form>
         </span>
-    </div>
-    <!-- break -->
-    <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
-        <div class="mt-6 bg-white shadow-sm rounded-lg divide-y">
-            @foreach ($accommodation as $accommodation)
-                <div class="p-6 flex space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 -scale-x-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                    <div class="flex-1">
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <span class="text-gray-800">{{ $accommodation->user->name }}</span>
-                                <small class="ml-2 text-sm text-gray-600">{{ $accommodation->created_at->format('j M Y, g:i a') }}</small>
-                                @unless ($accommodation->created_at->eq($accommodation->updated_at))
-                                <small class="text-sm text-gray-600"> &middot; {{ __('edited') }}</small>
-                                @endunless
-                            </div>
-                            @if ($accommodation->user->is(auth()->user()))
-                            <x-dropdown>
-                                <x-slot name="trigger">
-                                    <button>
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                        </svg>
-                                    </button>
-                                </x-slot>
-                                <x-slot name="content">
-                                    <x-dropdown-link :href="route('accommodation.edit', $accommodation)">
-                                        {{ __('Edit') }}
-                                    </x-dropdown-link>
-                                    <form method="POST" action="{{ route('accommodation.destroy', $accommodation) }}">
-                                        @csrf
-                                        @method('delete')
-                                        <x-dropdown-link :href="route('accommodation.destroy', $accommodation)" onclick="event.preventDefault(); this.closest('form').submit();">
-                                            {{ __('Delete') }}
-                                        </x-dropdown-link>
-                                    </form>
-                                </x-slot>
-                            </x-dropdown>
-                            @endif
-                        </div>
-                        <p class="mt-4 text-lg text-gray-900">{{ 
-                            $booking->message 
-                        }}</p>
-                    </div>
-                </div>
-            @endforeach
-        </div>
     </div>
 </x-app-layout>

@@ -37,7 +37,8 @@ class GroupController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $validated = $request->all();
+        /* $validated = $request->validate([
             'name_group' => 'required|string',
             'booked' => 'required|boolean',
             'name_accommodation' => 'string',
@@ -53,10 +54,9 @@ class GroupController extends Controller
             'children_count' => 'required|integer',
             'pet_count' => 'required|integer',
             'need_accessibility' => 'required|boolean', 
-        ]);
-
+        ]); */
         $request->user()->groups()->create($validated);
-        return redirect(route('groups.index'));
+        return redirect(route('group.index'));
     }
 
     /**
@@ -94,7 +94,8 @@ class GroupController extends Controller
     public function update(Request $request, Group $group)
     {
         $this->authorize('update', $group);
-        $validated = $request->validate([
+        $validated = $request->all();
+        /* $validated = $request->validate([
             'name_group' => 'required|string',
             'booked' => 'required|boolean',
             'name_accommodation' => 'string',
@@ -110,7 +111,7 @@ class GroupController extends Controller
             'children_count' => 'required|integer',
             'pet_count' => 'required|integer',
             'need_accessibility' => 'required|boolean', 
-        ]);
+        ]); */
         $group->update($validated);
         return redirect(route('group.index'));
     }

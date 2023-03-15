@@ -60,6 +60,14 @@ class BookingController extends Controller
         if($accom_num == $group_size){
             Region::where('name_region', '=', $region_name)->update(["amount_accommodations" => $region_accomm - 1]);
         }
+
+        /*could implement script or something in booking view to take data passed along with this return to run the alert from
+        from with in the view file*/ 
+        if($accom_num < $group_size){
+            $msg = "Group size too large for this accommodation";
+            echo "<script type='text/javascript'>alert('$msg');</script>";
+            return redirect(route('booking.index'));
+        }
         
         Region::where('name_region', '=', $region_name)->update(["amount_bookings" => $num_bookings + 1]);
         Accommodation::where('name_accommodation', '=', $validated['name_accommodation'])->update(['number_of_beds' => $accom_num - $group_size]);

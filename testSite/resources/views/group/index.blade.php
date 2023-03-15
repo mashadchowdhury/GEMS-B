@@ -2,8 +2,8 @@
     <div class="relative mt-2 flex">
         <div class="relative flex-auto m-5 p-5 w-full h-full overflow-y-auto overflow-x-hidden rounded-lg border border-gray-200 shadow-md">
             <!-- Main Body -->
-            <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
-                <thead class="bg-gray-50">
+            <table class="w-full border-collapse bg-white text-left text-sm">
+                <thead class="bg-gray-50 text-center">
                 <tr>
                     <th scope="col" class="px-1 py-4">Name</th>
                     <th scope="col" class="px-1 py-4">Booked</th>
@@ -24,7 +24,7 @@
                 </thead>
                 <tbody class="divide-y divide-gray-100 border-t border-gray-100">
                 @foreach ($group as $group)
-                <tr class="hover:bg-gray-50">
+                <tr class="hover:bg-gray-50 text-center">
                     <th class="flex gap-3 px-1 py-4 font-normal text-gray-900">
                         <div class="text-sm">{{$group->name_group}}</div>
                     </th>

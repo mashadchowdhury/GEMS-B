@@ -24,16 +24,21 @@
 
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-                <x-mapbox-search 
-                        style="height: 500px; width: 1175px;"
-                        id="mapId" 
-                        placeholder="Search" 
-                        :center="[-119, 51]" 
-                        :zoom="4" 
-                        :navigationControls="true"
-                        :rtl="true"
-                        :cooperativeGestures="true"
-                    />     
+        <x-mapbox 
+    id="map" 
+    class="hellomap" 
+    style="height: 500px; width: 1175px;" 
+    :center="['long' => -120, 'lat' => 49.93]"
+    :navigationControls="true"
+    :interactive="true"
+    :markers="[['long' => -119.5, 'lat' => 49.89,'description' => 'Kelowna'], 
+    ['long' => -120.33, 'lat' => 50.67,'description' => 'Kamloops 1'], 
+    ['long' => -120.5, 'lat' => 50.79,'description' => 'Kamloops 2'],
+    ['long' => -120.79, 'lat' => 50.11,'description' => 'Merritt'],
+    ['long' => -122.75, 'lat' => 53.92,'description' => 'Prince George'],
+    ['long' => -121.44, 'lat' => 49.38,'description' => 'Hope'],
+    ['long' => -117.66, 'lat' => 49.32,'description' => 'Castlegar']]" />   
+                    
     </body>
     
     

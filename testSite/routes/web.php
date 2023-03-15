@@ -40,7 +40,7 @@ Route::resource('accommodation', AccommodationController::class)
     ->middleware(['auth', 'verified']);
 
 Route::resource('region', RegionController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy'])
+    ->only(['index', 'store', 'edit', 'update', 'destroy', 'sort'])
     ->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {
@@ -52,5 +52,6 @@ Route::middleware('auth')->group(function () {
 //need to fix this, look into controller docs
 Route::get('/autoComplete',[SearchController::class, 'getAutoComplete'])->name('autoComplete');
 Route::post('searchDB',[SearchController::class, 'searchDB'])->name('searchDB');
+Route::get('/regions/sort/{column}', 'SortController@sort')->name('regions.sort');
 
 require __DIR__.'/auth.php';

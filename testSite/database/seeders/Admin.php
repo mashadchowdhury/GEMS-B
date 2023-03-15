@@ -1,12 +1,12 @@
 <?php
-//admin
+
 namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\str;
 use Illuminate\Database\QueryException;
- 
+
 
 class Admin extends Seeder
 {

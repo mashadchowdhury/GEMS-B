@@ -1,4 +1,5 @@
 @props(['align' => 'right', 'width' => '48', 'contentClasses' => 'py-1 bg-white'])
+
 @php
 switch ($align) {
     case 'left':
@@ -12,7 +13,6 @@ switch ($align) {
         $alignmentClasses = 'origin-top-right right-0';
         break;
 }
-
 
 switch ($width) {
     case '48':

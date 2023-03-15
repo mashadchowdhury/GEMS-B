@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Region;
+use App\Models\Group;
+use App\Models\Accommodation;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 
@@ -44,6 +47,12 @@ class BookingController extends Controller
             'from_date' => 'required|dateTime',
             'to_date' => 'required|dateTime',
         ]); */
+        $accom_num = Accommodation::select('number_of_beds')->where('name_accommodation', '=', $validated['name_accommodation'])->get();
+        $group_size = Group::select('group_count')->where('name_group', '=', $validated['name_group'])->get();
+        $accom_num = $accom_num->value('number_of_beds');
+        $group_size = $group_size->value('group_count');
+        
+        Accommodation::where('name_accommodation', '=', $validated['name_accommodation'])->update(['number_of_beds' => $accom_num - $group_size]);
         $request->user()->bookings()->create($validated);
         return redirect(route('booking.index'));
     }
@@ -102,6 +111,12 @@ class BookingController extends Controller
      */
     public function destroy(Booking $booking)
     {
+        $accom_num = Accommodation::select('number_of_beds')->where('name_accommodation', '=', $booking->name_accommodation)->get();
+        $group_size = Group::select('group_count')->where('name_group', '=', $booking->name_group)->get();
+        $accom_num = $accom_num->value('number_of_beds');
+        $group_size = $group_size->value('group_count');
+        
+        Accommodation::where('name_accommodation', '=', $booking->name_accommodation)->update(['number_of_beds' => $accom_num + $group_size]);
         $this->authorize('delete', $booking);
         $booking->delete();
         return redirect(route('booking.index'));

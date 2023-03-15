@@ -69,7 +69,7 @@
             </div>
             <form method="post" action="{{ route('searchDB') }}">
                 @csrf
-                <div class="ui-widget sm:-my-px sm:ml-10 p-4">
+                <div class="ui-widget p-4">
                     <input type="search" id = "automplete-1" name="automplete-1" placeholder = "Search" class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 </div>
             </form>

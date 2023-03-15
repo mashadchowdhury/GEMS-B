@@ -54,7 +54,7 @@
                     <div class="lg:w-2/3 md:w-1/2 bg-gray-0 rounded-lg overflow-hidden sm:mr-10 p-10 flex justify-start relative">
                     <div class="bg-gray-0 relative flex flex-wrap py-6 rounded shadow-md">
                     <img src="{{ asset('images/GEMSTagline.svg') }}" width="700" height="350" />
-                        <div class="lg:w-1/2 px-6">
+                    <div class="lg:w-1/2 px-6">
                         <h2 class="title-font font-semibold text-black tracking-widest text-xs">WEBSITE</h2>
                         <p class="mt-1 text-indigo-400 leading-relaxed">https://glohaven.com/</p>
                         </div>

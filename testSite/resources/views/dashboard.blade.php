@@ -40,7 +40,4 @@
     ['long' => -117.66, 'lat' => 49.32,'description' => 'Castlegar']]" />   
                     
     </body>
-    
-    
-   
 </x-app-layout>

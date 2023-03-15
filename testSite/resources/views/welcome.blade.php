@@ -52,19 +52,19 @@
                 <form class="form-horizontal form-contact clearfix" action="https://formspree.io/f/mqkwelpl" method="POST">
                 <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
                     <div class="lg:w-2/3 md:w-1/2 bg-gray-0 rounded-lg overflow-hidden sm:mr-10 p-10 flex justify-start relative">
-                    <div class="bg-gray-0 relative flex flex-wrap py-6 rounded shadow-md">
-                    <img src="{{ asset('images/GEMSTagline.svg') }}" width="700" height="350" />
-                    <div class="lg:w-1/2 px-6">
-                        <h2 class="title-font font-semibold text-black tracking-widest text-xs">WEBSITE</h2>
-                        <p class="mt-1 text-indigo-400 leading-relaxed">https://glohaven.com/</p>
+                        <div class="bg-gray-100 relative flex flex-wrap py-6 rounded shadow-md">
+                        <img src="{{ asset('images/GEMSTagline.svg') }}" width="700" height="350" />
+                        <div class="lg:w-1/2 px-6">
+                            <h2 class="title-font font-semibold text-black tracking-widest text-xs">WEBSITE</h2>
+                            <p class="mt-1 text-indigo-400 leading-relaxed">https://glohaven.com/</p>
+                            </div>
+                            <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                            <h2 class="title-font font-semibold text-black tracking-widest text-xs">EMAIL</h2>
+                            <a class="text-indigo-400 leading-relaxed">mike@glohaven.com</a>
+                            <h2 class="title-font font-semibold text-black tracking-widest text-xs mt-4">PHONE</h2>
+                            <p class="leading-relaxed">250-503-6126</p>
+                            </div>
                         </div>
-                        <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                        <h2 class="title-font font-semibold text-black tracking-widest text-xs">EMAIL</h2>
-                        <a class="text-indigo-400 leading-relaxed">mike@glohaven.com</a>
-                        <h2 class="title-font font-semibold text-black tracking-widest text-xs mt-4">PHONE</h2>
-                        <p class="leading-relaxed">250-503-6126</p>
-                        </div>
-                    </div>
                     </div>
                     <div class="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
                     <h2 class="text-black text-lg mb-1 font-medium title-font">Apply for a reservation</h2>

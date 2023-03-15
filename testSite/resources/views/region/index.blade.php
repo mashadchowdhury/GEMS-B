@@ -1,19 +1,19 @@
 <x-app-layout>
     <div class="relative mt-2 flex">
-        <div class="relative flex-auto m-5 p-5 w-full h-full overflow-y-auto overflow-x-hidden rounded-lg border border-gray-200 shadow-md">
+        <div class="relative flex-auto m-5 p-5 w-full h-full bg-gray-400 overflow-y-auto overflow-x-hidden rounded-lg border border-gray-200 shadow-md">
             <!-- Main Body -->
-            <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
-                <thead class="bg-gray-50">
+            <table class="w-full border-collapse bg-white text-left text-sm">
+                <thead class="bg-gray-50 text-center">
                 <tr>
-                    <th scope="col" class="px-6 py-4 font-medium text-gray-900">Region</th>
-                    <th scope="col" class="px-6 py-4 font-medium text-gray-900">Available Accommodations</th>
-                    <th scope="col" class="px-6 py-4 font-medium text-gray-900">Current Bookings</th>
-                    <th scope="col" class="px-6 py-4 font-medium text-gray-900">Available Rooms</th>
+                    <th scope="col" class="px-6 py-4 font-bold text-black">Region</th>
+                    <th scope="col" class="px-6 py-4 font-bold text-black">Available Accommodations</th>
+                    <th scope="col" class="px-6 py-4 font-bold text-black">Current Bookings</th>
+                    <th scope="col" class="px-6 py-4 font-bold text-black">Available Rooms</th>
                 </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100 border-t border-gray-100">
                 @foreach ($region as $region)
-                <tr class="hover:bg-gray-50">
+                <tr class="hover:bg-gray-50 text-center">
                     <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
                         <div class="text-sm">{{$region->name_region}}</div>
                     </th>
@@ -94,7 +94,7 @@
                     </div>
                     <div>
                         <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
-                            <a href="#" class="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">
+                            {{-- <a href="#" class="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">
                             <span class="sr-only">Previous</span>
                             <!-- Heroicon name: mini/chevron-left -->
                             <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -115,7 +115,7 @@
                             <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
                             </svg>
-                            </a>
+                            </a> --}}
                         </nav>
                     </div>
                 </div>

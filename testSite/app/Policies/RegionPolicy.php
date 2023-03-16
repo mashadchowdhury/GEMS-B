@@ -53,7 +53,7 @@ class RegionPolicy
      */
     public function update(User $user, Region $region)
     {
-        return $this->update($user, $region);
+        return $region->user()->is($user);
     }
 
     /**

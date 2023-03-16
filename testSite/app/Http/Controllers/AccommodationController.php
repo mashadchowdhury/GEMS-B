@@ -29,8 +29,6 @@ class AccommodationController extends Controller
         //
     }
 
-    
-
     /**
      * Store a newly created resource in storage.
      *
@@ -39,7 +37,8 @@ class AccommodationController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $validated = $request->all();
+        /* $validated = $request->validate([
             'name_accommodation' => 'required|string',
             'address' => 'required|string|max:128',
             'email_accommodation' => 'required|string|max:96',
@@ -52,8 +51,8 @@ class AccommodationController extends Controller
             'accessibility_available' => 'required|boolean',
             'accessibility_wheelchair' => 'required|boolean',
             'accessibility_walker' => 'required|boolean',
-            'region' => 'required|string',
-        ]);
+            'name_region' => 'required|string',
+        ]); */
         $request->user()->accommodations()->create($validated);
         return redirect(route('accommodation.index'));
     }
@@ -93,7 +92,8 @@ class AccommodationController extends Controller
     public function update(Request $request, Accommodation $accommodation)
     {
         $this->authorize('update', $accommodation);
-        $validated = $request->validate([
+        $validated = $request->all();
+        /* $validated = $request->validate([
             'name_accommodation' => 'required|string',
             'address' => 'required|string|max:128',
             'email_accommodation' => 'required|string|max:96',
@@ -106,8 +106,8 @@ class AccommodationController extends Controller
             'accessibility_available' => 'required|boolean',
             'accessibility_wheelchair' => 'required|boolean',
             'accessibility_walker' => 'required|boolean',
-            'region' => 'required|string',
-        ]);
+            'name_region' => 'required|string',
+        ]); */
         $accommodation->update($validated);
         return redirect(route('accommodation.index'));
     }

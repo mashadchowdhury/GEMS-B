@@ -21,8 +21,8 @@
             <label for="accommodation">Current Accommodation if applicable:</label><br>
             <input 
                 type="text" 
-                id="accommodation" 
-                name="accommodation" 
+                id="name_accommodation" 
+                name="name_accommodation" 
                 placeholder="{{ __('Eg: Hyatt Place') }}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>

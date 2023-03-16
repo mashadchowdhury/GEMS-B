@@ -53,7 +53,7 @@ class GroupPolicy
      */
     public function update(User $user, Group $group)
     {
-        return $this->update($user, $group);
+        return $group->user()->is($user);
     }
 
     /**

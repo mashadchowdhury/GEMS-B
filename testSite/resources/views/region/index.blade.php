@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="relative mt-2 flex">
-        <div class="relative flex-auto m-5 p-5 w-full h-full bg-gray-400 overflow-y-auto overflow-x-hidden rounded-lg border border-gray-200 shadow-md">
+        <div class="relative flex-auto m-5 p-5 w-full h-full bg-gray-400 overflow-y-auto overflow-x-hidden rounded-lg border border-gray-200 shadow-md"style="overflow: auto;">
             <!-- Main Body -->
             <table class="w-full border-collapse bg-white text-left text-sm">
                 <thead class="bg-gray-50 text-center">
@@ -67,7 +67,7 @@
                             ?>
                             Showing
                             <span class="font-medium">
-                                <?php 
+                                <?php
                                     if ($count > 0)
                                         echo "1";
                                     else
@@ -76,7 +76,7 @@
                             </span>
                             to
                             <span class="font-medium">
-                                <?php 
+                                <?php
                                     if ($count < 20)
                                         echo $count;
                                     else
@@ -85,7 +85,7 @@
                             </span>
                             of
                             <span class="font-medium">
-                                <?php 
+                                <?php
                                     echo $count;
                                 ?>
                             </span>
@@ -121,40 +121,40 @@
                 </div>
             </div>
         </div>
-        
+
         <span  class="p-4 text-sm bg-white rounded-lg border border-gray-200 shadow-md">
             <!-- Pop-up Form -->
             <form method="POST" action="{{ route('region.store') }}">
                 @csrf
                 <label for="name_region">Region name:</label><br>
-                <input 
-                    type="text" 
-                    id="name_region" 
-                    name="name_region" 
+                <input
+                    type="text"
+                    id="name_region"
+                    name="name_region"
                     placeholder="{{ __('Eg: West Kelowna') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="amount_accommodations">Amount of Available Accommodations:</label><br>
-                <input 
-                    type="text" 
-                    id="amount_accommodations" 
-                    name="amount_accommodations" 
+                <input
+                    type="text"
+                    id="amount_accommodations"
+                    name="amount_accommodations"
                     placeholder="{{ __('Eg: 7') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="amount_bookings">Amount of Current Bookings:</label><br>
-                <input 
-                    type="text" 
-                    id="amount_bookings" 
-                    name="amount_bookings" 
+                <input
+                    type="text"
+                    id="amount_bookings"
+                    name="amount_bookings"
                     placeholder="{{ __('Eg: 40') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="available_rooms">Amount of Available Rooms:</label><br>
-                <input 
-                    type="text" 
-                    id="available_rooms" 
-                    name="available_rooms" 
+                <input
+                    type="text"
+                    id="available_rooms"
+                    name="available_rooms"
                     placeholder="{{ __('Eg: 83') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <x-primary-button class="mt-4">{{ __('Create Region') }}</x-primary-button>

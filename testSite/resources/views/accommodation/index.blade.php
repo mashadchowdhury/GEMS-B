@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="relative mt-2 flex">
-        <div class="relative flex-auto m-5 p-5 w-full h-full overflow-y-auto overflow-x-hidden rounded-lg border border-gray-200 shadow-md">
+        <div class="relative flex-auto m-5 p-5 w-full h-full overflow-y-auto overflow-x-hidden rounded-lg border border-gray-200 shadow-md"style="overflow: auto;">
             <!-- Main Body -->
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
                 <thead class="bg-gray-50">
@@ -103,7 +103,7 @@
                             ?>
                             Showing
                             <span class="font-medium">
-                                <?php 
+                                <?php
                                     if ($count > 0)
                                         echo "1";
                                     else
@@ -112,7 +112,7 @@
                             </span>
                             to
                             <span class="font-medium">
-                                <?php 
+                                <?php
                                     if ($count < 20)
                                         echo $count;
                                     else
@@ -121,7 +121,7 @@
                             </span>
                             of
                             <span class="font-medium">
-                                <?php 
+                                <?php
                                     echo $count;
                                 ?>
                             </span>
@@ -157,106 +157,106 @@
                 </div>
             </div>
         </div>
-        
+
         <span  class="p-4 text-sm bg-white rounded-lg border border-gray-200 shadow-md">
             <!-- Pop-up Form -->
             <form method="POST" action="{{ route('accommodation.store') }}">
                 @csrf
                 <label for="name_accommodation">Name of Accommodation:</label><br>
-                <input 
-                    type="text" 
-                    id="name_accommodation" 
-                    name="name_accommodation" 
+                <input
+                    type="text"
+                    id="name_accommodation"
+                    name="name_accommodation"
                     placeholder="{{ __('Eg: Hyatt Place') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="address">Address of Accommodation:</label><br>
-                <input 
-                    type="text" 
-                    id="address" 
-                    name="address" 
+                <input
+                    type="text"
+                    id="address"
+                    name="address"
                     placeholder="{{ __('Eg: 1800 Main St.') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="email_accommodation">Email of Accommodation:</label><br>
-                <input 
-                    type="email" 
-                    id="email_accommodation" 
-                    name="email_accommodation" 
+                <input
+                    type="email"
+                    id="email_accommodation"
+                    name="email_accommodation"
                     placeholder="{{ __('Eg: frontdesk@company.com') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="room_type">Room Type:</label><br>
-                <input 
-                    type="text" 
-                    id="room_type" 
-                    name="room_type" 
+                <input
+                    type="text"
+                    id="room_type"
+                    name="room_type"
                     placeholder="{{ __('Eg: Gymnasium, Hotel') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="number_of_rooms">Number of Rooms:</label><br>
-                <input 
-                    type="text" 
-                    id="number_of_rooms" 
-                    name="number_of_rooms" 
+                <input
+                    type="text"
+                    id="number_of_rooms"
+                    name="number_of_rooms"
                     placeholder="{{ __('Eg: 23') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="number_of_beds">Number of Beds:</label><br>
-                <input 
-                    type="text" 
-                    id="number_of_beds" 
-                    name="number_of_beds" 
+                <input
+                    type="text"
+                    id="number_of_beds"
+                    name="number_of_beds"
                     placeholder="{{ __('Eg: 58') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="ESS_support">ESS Supported here?:</label>
-                <input 
-                    type="checkbox" 
-                    id="ESS_support" 
-                    name="ESS_support" 
+                <input
+                    type="checkbox"
+                    id="ESS_support"
+                    name="ESS_support"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="restaurant_available">Restaurants available nearby?:</label>
-                <input 
-                    type="checkbox" 
-                    id="restaurant_available" 
-                    name="restaurant_available" 
+                <input
+                    type="checkbox"
+                    id="restaurant_available"
+                    name="restaurant_available"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="pets_allowed">Pets allowed?:</label>
-                <input 
-                    type="checkbox" 
-                    id="pets_allowed" 
-                    name="pets_allowed" 
+                <input
+                    type="checkbox"
+                    id="pets_allowed"
+                    name="pets_allowed"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="accessibility_available">Disability access available?:</label>
-                <input 
-                    type="checkbox" 
-                    id="accessibility_available" 
-                    name="accessibility_available" 
+                <input
+                    type="checkbox"
+                    id="accessibility_available"
+                    name="accessibility_available"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="accessibility_wheelchair">Wheelchair access available?:</label>
-                <input 
-                    type="checkbox" 
-                    id="accessibility_wheelchair" 
-                    name="accessibility_wheelchair" 
+                <input
+                    type="checkbox"
+                    id="accessibility_wheelchair"
+                    name="accessibility_wheelchair"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="accessibility_walker">Walker access available?:</label>
-                <input 
-                    type="checkbox" 
-                    id="accessibility_walker" 
-                    name="accessibility_walker" 
+                <input
+                    type="checkbox"
+                    id="accessibility_walker"
+                    name="accessibility_walker"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="name_region">Location/Region:</label><br>
-                <input 
-                    type="text" 
-                    id="name_region" 
-                    name="name_region" 
+                <input
+                    type="text"
+                    id="name_region"
+                    name="name_region"
                     placeholder="{{ __('Eg: Kelowna') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <x-primary-button class="mt-4">{{ __('Create Accommodation') }}</x-primary-button>

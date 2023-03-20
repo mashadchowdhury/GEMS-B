@@ -9,6 +9,7 @@
                 id="name_region" 
                 name="name_region" 
                 placeholder="{{ __('Eg: West Kelowna') }}"
+                value="{{$region->name_region}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="amount_accommodations">Amount of Available Accommodations:</label><br>
@@ -17,6 +18,7 @@
                 id="amount_accommodations" 
                 name="amount_accommodations" 
                 placeholder="{{ __('Eg: 7') }}"
+                value="{{$region->amount_accommodations}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="amount_bookings">Amount of Current Bookings:</label><br>
@@ -25,6 +27,7 @@
                 id="amount_bookings" 
                 name="amount_bookings" 
                 placeholder="{{ __('Eg: 40') }}"
+                value="{{$region->amount_bookings}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="available_rooms">Amount of Available Rooms:</label><br>
@@ -33,6 +36,7 @@
                 id="available_rooms" 
                 name="available_rooms" 
                 placeholder="{{ __('Eg: 83') }}"
+                value="{{$region->available_rooms}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <x-input-error :messages="$errors->get('message')" class="mt-2" />
             <div class="mt-4 space-x-2">

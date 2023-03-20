@@ -211,45 +211,57 @@
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="ESS_support">ESS Supported here?:</label>
+                <input type="hidden" name="ESS_support" value="No"> 
                 <input
                     type="checkbox"
                     id="ESS_support"
                     name="ESS_support"
+                    value="Yes"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="restaurant_available">Restaurants available nearby?:</label>
+                <input type="hidden" name="restaurant_available" value="No">
                 <input
                     type="checkbox"
                     id="restaurant_available"
                     name="restaurant_available"
+                    value="Yes"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="pets_allowed">Pets allowed?:</label>
+                <input type="hidden" name="pets_allowed" value="No">
                 <input
                     type="checkbox"
                     id="pets_allowed"
                     name="pets_allowed"
+                    value="Yes"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="accessibility_available">Disability access available?:</label>
+                <input type="hidden" name="accessibility_available" value="No">
                 <input
                     type="checkbox"
                     id="accessibility_available"
                     name="accessibility_available"
+                    value="Yes"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="accessibility_wheelchair">Wheelchair access available?:</label>
+                <input type="hidden" name="accessibility_wheelchair" value="No">
                 <input
                     type="checkbox"
                     id="accessibility_wheelchair"
                     name="accessibility_wheelchair"
+                    value="Yes"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="accessibility_walker">Walker access available?:</label>
+                <input type="hidden" name="accessibility_walker" value="No">
                 <input
                     type="checkbox"
                     id="accessibility_walker"
                     name="accessibility_walker"
+                    value="Yes"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="name_region">Location/Region:</label><br>
@@ -258,6 +270,7 @@
                     id="name_region"
                     name="name_region"
                     placeholder="{{ __('Eg: Kelowna') }}"
+                    
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <x-primary-button class="mt-4">{{ __('Create Accommodation') }}</x-primary-button>
             </form>

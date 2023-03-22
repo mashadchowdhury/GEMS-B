@@ -37,22 +37,21 @@ class AccommodationController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->all();
-        /* $validated = $request->validate([
+        $validated = $request->validate([
             'name_accommodation' => 'required|string',
             'address' => 'required|string|max:128',
             'email_accommodation' => 'required|string|max:96',
             'room_type' => 'required|string',
             'number_of_rooms' => 'integer',
             'number_of_beds' => 'integer',
-            'ESS_support' => 'required|boolean',
-            'restaurant_available' => 'required|boolean',
-            'pets_allowed' => 'required|boolean',
-            'accessibility_available' => 'required|boolean',
-            'accessibility_wheelchair' => 'required|boolean',
-            'accessibility_walker' => 'required|boolean',
+            'ESS_support' => 'boolean',
+            'restaurant_available' => 'boolean',
+            'pets_allowed' => 'boolean',
+            'accessibility_available' => 'boolean',
+            'accessibility_wheelchair' => 'boolean',
+            'accessibility_walker' => 'boolean',
             'name_region' => 'required|string',
-        ]); */
+        ]);
         $request->user()->accommodations()->create($validated);
         return redirect(route('accommodation.index'));
     }

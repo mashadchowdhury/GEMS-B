@@ -24,6 +24,18 @@ class Accommodation extends Model
         'name_region',
     ];
 
+    public function __construct(array $attributes = [])
+    {
+        $attributes['ESS_support'] = $attributes['ESS_support'] ?? "No";
+        $attributes['restaurant_available'] = $attributes['restaurant_available'] ?? "No";
+        $attributes['pets_allowed'] = $attributes['pets_allowed'] ?? "No";
+        $attributes['accessibility_available'] = $attributes['accessibility_available'] ?? "No";
+        $attributes['accessibility_wheelchair'] = $attributes['accessibility_wheelchair'] ?? "No";
+        $attributes['accessibility_walker'] = $attributes['accessibility_walker'] ?? "No";
+
+        parent::__construct($attributes);
+    }
+
     public function user(){
         return $this->belongsTo(User::class);
     }

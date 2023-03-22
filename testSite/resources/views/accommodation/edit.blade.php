@@ -58,12 +58,13 @@
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="ESS_support">ESS Supported here?:</label>
+            <input type="hidden" name="ESS_support" value="No">
             @if ($accommodation->ESS_support == "Yes")
             <input 
                 type="checkbox" 
                 id="ESS_support" 
                 name="ESS_support"
-                value="{{$accommodation->ESS_support}}" 
+                value="Yes" 
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                 checked>
             <br>
@@ -72,18 +73,19 @@
                 type="checkbox" 
                 id="ESS_support" 
                 name="ESS_support"
-                value="{{$accommodation->ESS_support}}" 
+                value="Yes" 
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             @endif
 
             <label for="restaurant_available">Restaurants available nearby?:</label>
+            <input type="hidden" name="restaurant_available" value="No">
             @if($accommodation->restaurant_available == "Yes")
             <input 
                 type="checkbox" 
                 id="restaurant_available" 
                 name="restaurant_available" 
-                value="{{$accommodation->restaurant_available}}"
+                value="Yes"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                 checked>
             <br>
@@ -92,18 +94,19 @@
                 type="checkbox" 
                 id="restaurant_available" 
                 name="restaurant_available" 
-                value="{{$accommodation->restaurant_available}}"
+                value="Yes"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             @endif
 
             <label for="pets_allowed">Pets allowed?:</label>
+            <input type="hidden" name="pets_allowed" value="No">
             @if($accommodation->pets_allowed =="Yes")
             <input 
                 type="checkbox" 
                 id="pets_allowed" 
                 name="pets_allowed" 
-                value="{{$accommodation->pets_allowed}}"
+                value="Yes"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                 checked>
             <br>
@@ -112,18 +115,19 @@
                 type="checkbox" 
                 id="pets_allowed" 
                 name="pets_allowed" 
-                value="{{$accommodation->pets_allowed}}"
+                value="Yes"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             @endif
 
             <label for="accessibility_available">Disability access available?:</label>
+            <input type="hidden" name="accessibility_available" value="No">
             @if($accommodation->accessibility_available == "Yes")
             <input 
                 type="checkbox" 
                 id="accessibility_available" 
                 name="accessibility_available" 
-                value="{{$accommodation->accessibility_available}}"
+                value="Yes"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                 checked>
             <br>
@@ -132,18 +136,19 @@
                 type="checkbox" 
                 id="accessibility_available" 
                 name="accessibility_available" 
-                value="{{$accommodation->accessibility_available}}"
+                value="Yes"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             @endif
 
             <label for="accessibility_wheelchair">Wheelchair access available?:</label>
+            <input type="hidden" name="accessibility_wheelchair" value="No">
             @if($accommodation->accessibility_wheelchair == "Yes")
             <input 
                 type="checkbox" 
                 id="accessibility_wheelchair" 
                 name="accessibility_wheelchair"
-                value="{{$accommodation->accessibility_wheelchair}}" 
+                value="Yes" 
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                 checked>
             <br>
@@ -152,18 +157,19 @@
                 type="checkbox" 
                 id="accessibility_wheelchair" 
                 name="accessibility_wheelchair"
-                value="{{$accommodation->accessibility_wheelchair}}" 
+                value="Yes" 
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             @endif
 
             <label for="accessibility_walker">Walker access available?:</label>
+            <input type="hidden" name="accessibility_walker" value="No">
             @if($accommodation->accessibility_walker == "Yes")
             <input 
                 type="checkbox" 
                 id="accessibility_walker" 
                 name="accessibility_walker" 
-                value="{{$accommodation->accessibility_walker}}"
+                value="Yes"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                 checked>
             <br>
@@ -172,7 +178,7 @@
                 type="checkbox" 
                 id="accessibility_walker" 
                 name="accessibility_walker" 
-                value="{{$accommodation->accessibility_walker}}"
+                value="Yes"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             @endif

@@ -13,12 +13,13 @@
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="booked">Booked Status:</label>
+            <input type="hidden" name="booked" value="No">
             @if($group->booked == "Yes")
             <input 
                 type="checkbox" 
                 id="booked" 
                 name="booked" 
-                value="{{$group->booked}}"
+                value="Yes"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                 checked>
             <br>
@@ -27,7 +28,7 @@
                 type="checkbox" 
                 id="booked" 
                 name="booked" 
-                value="{{$group->booked}}"
+                value="Yes"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             @endif
@@ -96,12 +97,13 @@
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="is_ESS_group">ESS:</label>
+            <input type="hidden" name="is_ESS_group" value="No">
             @if($group->is_ESS_group == "Yes")
             <input 
                 type="checkbox" 
                 id="is_ESS_group" 
                 name="is_ESS_group" 
-                value="{{$group->is_ESS_group}}"
+                value="Yes"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                 checked>
             <br>
@@ -110,7 +112,7 @@
                 type="checkbox" 
                 id="is_ESS_group" 
                 name="is_ESS_group" 
-                value="{{$group->is_ESS_group}}"
+                value="Yes"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             @endif
@@ -152,12 +154,13 @@
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="need_accessibility">Accessibility Needs?:</label>
+            <input type="hidden" name="need_accessibility" value="No">
             @if($group->need_accessibility == "Yes")
             <input 
                 type="checkbox" 
                 id="need_accessibility" 
                 name="need_accessibility" 
-                value="{{$group->need_accessibility}}"
+                value="Yes"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                 checked>
             @else
@@ -165,7 +168,7 @@
                 type="checkbox" 
                 id="need_accessibility" 
                 name="need_accessibility" 
-                value="{{$group->need_accessibility}}"
+                value="Yes"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             @endif
 

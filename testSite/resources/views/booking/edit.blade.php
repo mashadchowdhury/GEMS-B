@@ -9,6 +9,7 @@
                 id="name_accommodation"
                 name="name_accommodation"
                 placeholder="{{ __('Eg: Hyatt Place') }}"
+                value="{{$booking->name_accommodation}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="group">Group:</label><br>
@@ -17,6 +18,7 @@
                 id="name_group"
                 name="name_group"
                 placeholder="{{ __('Eg: Penticton Fire Dept.') }}"
+                value="{{$booking->name_group}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="from_date">Booking Start Date:</label><br>
@@ -24,6 +26,7 @@
                 type="date"
                 id="from_date"
                 name="from_date"
+                value="{{$booking->from_date}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="to_date">Booking End Date:</label><br>
@@ -31,6 +34,7 @@
                 type="date"
                 id="to_date"
                 name="to_date"
+                value="{{$booking->to_date}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <div class="mt-4 space-x-2">
                 <x-primary-button>{{ __('Save') }}</x-primary-button>

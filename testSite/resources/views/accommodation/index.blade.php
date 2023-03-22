@@ -45,22 +45,22 @@
                         <div>{{$accommodation->number_of_beds}}</div>
                     </td>
                     <td class="px-1 py-4 text-sm font-medium text-gray-700">
-                        <div>{{$accommodation->ESS_support}}</div>
+                        <div>{{$accommodation->ESS_support ? "Yes" : "No"}}</div>
                     </td>
                     <td class="px-1 py-4 text-sm font-medium text-gray-700">
-                        <div>{{$accommodation->restaurant_available}}</div>
+                        <div>{{$accommodation->restaurant_available ? "Yes" : "No"}}</div>
                     </td>
                     <td class="px-1 py-4 text-sm font-medium text-gray-700">
-                        <div>{{$accommodation->pets_allowed}}</div>
+                        <div>{{$accommodation->pets_allowed ? "Yes" : "No"}}</div>
                     </td>
                     <td class="px-1 py-4 text-sm font-medium text-gray-700">
-                        <div>{{$accommodation->accessibility_available}}</div>
+                        <div>{{$accommodation->accessibility_available ? "Yes" : "No"}}</div>
                     </td>
                     <td class="px-1 py-4 text-sm font-medium text-gray-700">
-                        <div>{{$accommodation->accessibility_wheelchair}}</div>
+                        <div>{{$accommodation->accessibility_wheelchair ? "Yes" : "No"}}</div>
                     </td>
                     <td class="px-1 py-4 text-sm font-medium text-gray-700">
-                        <div>{{$accommodation->accessibility_walker}}</div>
+                        <div>{{$accommodation->accessibility_walker ? "Yes" : "No"}}</div>
                     </td>
                     <td class="px-1 py-4">
                     <div class="flex justify-end">
@@ -215,6 +215,7 @@
                     type="checkbox"
                     id="ESS_support"
                     name="ESS_support"
+                    value="1"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="restaurant_available">Restaurants available nearby?:</label>
@@ -222,6 +223,7 @@
                     type="checkbox"
                     id="restaurant_available"
                     name="restaurant_available"
+                    value="1"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="pets_allowed">Pets allowed?:</label>
@@ -229,6 +231,7 @@
                     type="checkbox"
                     id="pets_allowed"
                     name="pets_allowed"
+                    value="1"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="accessibility_available">Disability access available?:</label>
@@ -236,6 +239,7 @@
                     type="checkbox"
                     id="accessibility_available"
                     name="accessibility_available"
+                    value="1"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="accessibility_wheelchair">Wheelchair access available?:</label>
@@ -243,6 +247,7 @@
                     type="checkbox"
                     id="accessibility_wheelchair"
                     name="accessibility_wheelchair"
+                    value="1"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="accessibility_walker">Walker access available?:</label>
@@ -250,6 +255,7 @@
                     type="checkbox"
                     id="accessibility_walker"
                     name="accessibility_walker"
+                    value="1"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="name_region">Location/Region:</label><br>

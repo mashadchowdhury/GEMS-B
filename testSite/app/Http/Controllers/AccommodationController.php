@@ -52,6 +52,7 @@ class AccommodationController extends Controller
             'accessibility_walker' => 'boolean',
             'name_region' => 'required|string',
         ]);
+
         $request->user()->accommodations()->create($validated);
         return redirect(route('accommodation.index'));
     }

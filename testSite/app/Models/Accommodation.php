@@ -26,12 +26,12 @@ class Accommodation extends Model
 
     public function __construct(array $attributes = [])
     {
-        $attributes['ESS_support'] = $attributes['ESS_support'] ?? "No";
-        $attributes['restaurant_available'] = $attributes['restaurant_available'] ?? "No";
-        $attributes['pets_allowed'] = $attributes['pets_allowed'] ?? "No";
-        $attributes['accessibility_available'] = $attributes['accessibility_available'] ?? "No";
-        $attributes['accessibility_wheelchair'] = $attributes['accessibility_wheelchair'] ?? "No";
-        $attributes['accessibility_walker'] = $attributes['accessibility_walker'] ?? "No";
+        $attributes['ESS_support'] = $attributes['ESS_support'] ?? false;
+        $attributes['restaurant_available'] = $attributes['restaurant_available'] ?? false;
+        $attributes['pets_allowed'] = $attributes['pets_allowed'] ?? false;
+        $attributes['accessibility_available'] = $attributes['accessibility_available'] ?? false;
+        $attributes['accessibility_wheelchair'] = $attributes['accessibility_wheelchair'] ?? false;
+        $attributes['accessibility_walker'] = $attributes['accessibility_walker'] ?? false;
 
         parent::__construct($attributes);
     }

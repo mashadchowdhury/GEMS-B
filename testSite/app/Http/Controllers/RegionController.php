@@ -104,4 +104,17 @@ class RegionController extends Controller
         $region->delete();
         return redirect(route('region.index'));
     }
+
+    /**
+     * Sort the specified resource from storage.
+     *
+     * @param  \App\Models\Region  $region
+     * @return \Illuminate\Http\Response
+     */
+    public function sort($column)
+    {
+        return view('region.index', [
+            'region' => Region::with('user')->latest()->orderBy('$column')->get(),
+        ]);
+    }
 }

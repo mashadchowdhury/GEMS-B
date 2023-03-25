@@ -37,13 +37,13 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'message' => 'required|string|max:255',
+        $validated = $request->all();
+        /* $validated = $request->validate([
             'accommodation' => 'required|string',
             'group' => 'required|string',
             'from_date' => 'required|dateTime',
             'to_date' => 'required|dateTime',
-        ]);
+        ]); */
         $request->user()->bookings()->create($validated);
         return redirect(route('booking.index'));
     }
@@ -83,13 +83,13 @@ class BookingController extends Controller
     public function update(Request $request, Booking $booking)
     {
         $this->authorize('update', $booking);
-        $validated = $request->validate([
-            'message' => 'required|string|max:255',
+        $validated = $request->all();
+        /* $validated = $request->validate([
             'accommodation' => 'required|string',
             'group' => 'required|string',
             'from_date' => 'required|dateTime',
             'to_date' => 'required|dateTime',
-        ]);
+        ]); */
         $booking->update($validated);
         return redirect(route('booking.index'));
     }

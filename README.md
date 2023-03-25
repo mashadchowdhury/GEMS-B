@@ -87,6 +87,9 @@ Task: Dummy database
 ***
 ## Milestone 4: Product Delivery: March 2023
 
+*March 7th: List of Usability Tasks*
+
+*March 14th: Prototype Video*
+
+*March 15th,17th: Peer Testing Session*
 ***
-## Extra Features
-Will be updated accordingly

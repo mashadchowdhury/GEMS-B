@@ -5,6 +5,7 @@ use App\Http\Controllers\GroupController;
 use App\Http\Controllers\AccommodationController;
 use App\Http\Controllers\RegionController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,7 +40,7 @@ Route::resource('accommodation', AccommodationController::class)
     ->middleware(['auth', 'verified']);
 
 Route::resource('region', RegionController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy'])
+    ->only(['index', 'store', 'edit', 'update', 'destroy', 'sort'])
     ->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {
@@ -47,5 +48,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+//need to fix this, look into controller docs
+Route::get('/autoComplete',[SearchController::class, 'getAutoComplete'])->name('autoComplete');
+Route::post('searchDB',[SearchController::class, 'searchDB'])->name('searchDB');
+Route::get('/regions/sort/{column}', 'SortController@sort')->name('regions.sort');
 
 require __DIR__.'/auth.php';

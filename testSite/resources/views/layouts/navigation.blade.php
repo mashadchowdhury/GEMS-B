@@ -1,4 +1,42 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+    <head>
+        <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+        <!-- Javascript -->
+        <script>
+            var path = "{{ route('autoComplete') }}";
+            $(function() {
+                var availableTutorials  =  [
+                "ActionScript",
+                "Bootstrap",
+                "C",
+                "C++",
+                ];
+                $( "#automplete-1" ).autocomplete({
+                source: function( request, response){
+                    $.ajax( {
+                        url: "{{ route('autoComplete') }}",
+                        dataType: "json",
+                        data: {
+                            term: request.term
+                        },
+                        success: function( data ) {
+                            console.log(JSON.stringify(data));
+                            response( data );
+                        }
+                    }    );
+                }
+                } );
+               
+            });
+        </script>
+    </head>
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -29,7 +67,12 @@
                     </x-nav-link>
                 </div>
             </div>
-
+            <form method="post" action="{{ route('searchDB') }}">
+                @csrf
+                <div class="ui-widget p-4">
+                    <input type="search" id = "automplete-1" name="automplete-1" placeholder = "Search" class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                </div>
+            </form>
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">

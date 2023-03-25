@@ -2,7 +2,7 @@
     <script>
         console.log($searchResult);
     </script>
-    <div>
+    <div> 
         @foreach ($region as $region)
         <p class="mt-4 text-lg text-gray-900">
             <b>{{$region->name_region}}</b>

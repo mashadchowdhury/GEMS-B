@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
+    <head> 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Glohaven EMS</title>
         <!-- Welcome > Dashboard > Navigation Header Bar (displays content below) -->
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -19,8 +19,15 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+
+        <!-- Scripts -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="antialiased">
+    
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -35,98 +42,75 @@
                     @endauth
                 </div>
             @endif
-
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-center sm:pt-0">
-                    <a href="/" title="Home Page">
-                        <img src="{{ asset('images/GEMSTagline.svg') }}" width="270" height="135" />
-        </a>
-                </div>
-
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                    <form action="/search" method="POST" role="search">
-                        {{ csrf_field() }}
-                        <div class="input-group">
-                            <input type="text" class="form-control" name="q"
-                                placeholder="Search Accommodations"> <span class="input-group-btn">
-                                <button type="submit" class="btn btn-default">
-                                    <span class="glyphicon glyphicon-search"></span>
-                                </button>
-                            </span>
+            
+            <div class="max-w-8xl mx-auto sm:px-6 lg:px-8">
+                <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <section class="text-gray-900 bg-gray-0 body-font relative">
+                <!--Page Content-->
+                <form class="form-horizontal form-contact clearfix" action="https://formspree.io/f/mqkwelpl" method="POST">
+                <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+                    <div class="lg:w-2/3 md:w-1/2 bg-gray-0 rounded-lg overflow-hidden sm:mr-10 p-10 flex justify-start relative">
+                    <div class="bg-gray-0 relative flex flex-wrap py-6 rounded shadow-md">
+                    <img src="{{ asset('images/GEMSTagline.svg') }}" width="700" height="350" />
+                        <div class="lg:w-1/2 px-6">
+                        <h2 class="title-font font-semibold text-black tracking-widest text-xs">ADDRESS</h2>
+                        <p class="mt-1 text-orange-400 leading-relaxed">Proudly serving the Okanagan</p>
+                        <h2 class="title-font font-semibold text-black tracking-widest text-xs mt-4">WEBSITE</h2>
+                        <p class="mt-1 text-orange-400 leading-relaxed">https://glohaven.com/</p>
                         </div>
-                    </form>
-                    </div>
-                </div>
-
-                @php{{
-                    include 'leaflet-heatmap.js';
-                    var testData = {
-                        max: 8,
-                        data: [{lat: 24.6408, lng:46.7728, count: 3},{lat: 50.75, lng:-1.55, count: 1}]
-                    };
-                    var baseLayer = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution: '...',maxZoom: 18});
-                    
-                    var cfg = {
-                    // radius should be small ONLY if scaleRadius is true (or small radius is intended)
-                    // if scaleRadius is false it will be the constant radius used in pixels
-                    "radius": 2,
-                    "maxOpacity": .8,
-                    // scales the radius based on map zoom
-                    "scaleRadius": true,
-                    // if set to false the heatmap uses the global maximum for colorization
-                    // if activated: uses the data maximum within the current map boundaries
-                    //   (there will always be a red spot with useLocalExtremas true)
-                    "useLocalExtrema": true,
-                    // which field name in your data represents the latitude - default "lat"
-                    latField: 'lat',
-                    // which field name in your data represents the longitude - default "lng"
-                    lngField: 'lng',
-                    // which field name in your data represents the data value - default "value"
-                    valueField: 'count'
-                    };
-
-
-                    var heatmapLayer = h337.create(cfg);
-
-                    var map = new L.Map('map-canvas', {
-                    center: new L.LatLng(25.6586, -80.3568),
-                    zoom: 4,
-                    layers: [baseLayer, heatmapLayer]
-                    });
-
-                    heatmapLayer.setData(testData);
-
-                    
-                }}
-                @endphp
-
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
+                        <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                        <h2 class="title-font font-semibold text-black tracking-widest text-xs">EMAIL</h2>
+                        <a class="text-orange-400 leading-relaxed">george@glohaven.com</a>
+                        <h2 class="title-font font-semibold text-black tracking-widest text-xs mt-4">PHONE</h2>
+                        <p class="text-orange-400 leading-relaxed">(250)-503-6126</p>
                         </div>
                     </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                    </div>
+                    <div class="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+                    <h2 class="text-black text-lg mb-1 font-medium title-font">Apply for a reservation</h2>
+                    <p class="leading-relaxed mb-5"></p>
+                    <div class="relative mb-4">
+                        <label for="name" class="leading-7 text-sm text-gray-400">Name</label>
+                        <input type="text" id="name" name="Name" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
+                        <input type="email" id="email" name="E-mail Address" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="phone" class="leading-7 text-sm text-gray-400">Phone Number</label>
+                        <input type="tel" id="phone" name="Phone Number" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="numpeople" class="leading-7 text-sm text-gray-400">Number of People</label>
+                        <input type="number" id="numpeople" name="Number Of People" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="region" class="leading-7 text-sm text-gray-400">Location Requested</label>
+                        <input type="text" id="region" name="Location Requested" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="checkinout" class="leading-7 text-sm text-gray-400">Check In and Check Out Date</label>
+                        <input type="date" id="checkin" name="Check-in Date" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        <input type="date" id="checkout" name="Check-out Date" min ="2023-03-15" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    
+                    <button class="text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg">Submit Request</button>
+                    <p class="text-xs text-gray-400 text-opacity-90 mt-3">© 2023, Glohaven Community Hub Powered by Glohaven Community Hub</p>
                     </div>
                 </div>
+                </form>
+            </section>
             </div>
         </div>
+    </div>
+            </div>
+        </div>
+                
+        
+                
+                
     </body>
 </html>

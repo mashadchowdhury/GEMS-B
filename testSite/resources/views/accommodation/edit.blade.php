@@ -1,9 +1,8 @@
 <x-app-layout>
     <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
         <form method="POST" action="{{ route('accommodation.update', $accommodation) }}">
-            @csrf  
-                      
-            @method('patch')
+            @csrf
+            @method('patch') 
             <label for="name_accommodation">Name of Accommodation:</label><br>
             <input 
                 type="text" 
@@ -97,8 +96,8 @@
             <label for="region">Location/Region:</label><br>
             <input 
                 type="text" 
-                id="region" 
-                name="region" 
+                id="name_region" 
+                name="name_region" 
                 placeholder="{{ __('Eg: Kelowna') }}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <div class="mt-4 space-x-2">

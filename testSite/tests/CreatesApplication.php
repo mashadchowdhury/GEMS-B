@@ -1,8 +1,9 @@
 <?php
-//create application php
-namespace Tests; 
+
+namespace Tests;
+ 
 use Illuminate\Contracts\Console\Kernel;
-  
+
 trait CreatesApplication
 {
     /**

@@ -1,7 +1,7 @@
 <?php
-//userfactory
-namespace Database\Factories;
  
+namespace Database\Factories;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 

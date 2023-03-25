@@ -1,5 +1,5 @@
 <?php
-//groups
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('name_group');
             $table->boolean('booked');
-            $table->string('accommodation');
+            $table->string('name_accommodation');
             $table->string('name_primary_contact');
             $table->string('telephone_primary_contact', 32);
             $table->string('email_primary_contact',96);

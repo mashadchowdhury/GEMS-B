@@ -58,7 +58,7 @@
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="ESS_support">ESS Supported here?:</label>
-
+            <input type="hidden" name="ESS_support" value="0">
             @if ($accommodation->ESS_support == "1")
             <input 
                 type="checkbox" 
@@ -79,7 +79,7 @@
             @endif
 
             <label for="restaurant_available">Restaurants available nearby?:</label>
-
+            <input type="hidden" name="restaurant_available" value="0">
             @if($accommodation->restaurant_available == "1")
             <input 
                 type="checkbox" 
@@ -100,6 +100,7 @@
             @endif
 
             <label for="pets_allowed">Pets allowed?:</label>
+            <input type="hidden" name="pets_allowed" value="0">
             @if($accommodation->pets_allowed =="1")
             <input 
                 type="checkbox" 
@@ -120,6 +121,7 @@
             @endif
 
             <label for="accessibility_available">Disability access available?:</label>
+            <input type="hidden" name="accessibility_available" value="0">
             @if($accommodation->accessibility_available == "1")
             <input 
                 type="checkbox" 
@@ -140,6 +142,7 @@
             @endif
 
             <label for="accessibility_wheelchair">Wheelchair access available?:</label>
+            <input type="hidden" name="accessibility_wheelchair" value="0">
             @if($accommodation->accessibility_wheelchair == "1")
             <input 
                 type="checkbox" 
@@ -160,7 +163,8 @@
             @endif
 
             <label for="accessibility_walker">Walker access available?:</label>
-            @if($accommodation->accessibility_walker == "Yes")
+            <input type="hidden" name="accessibility_walker" value="0">
+            @if($accommodation->accessibility_walker == "1")
             <input 
                 type="checkbox" 
                 id="accessibility_walker" 

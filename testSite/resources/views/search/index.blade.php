@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout> 
     <script>
         console.log($searchResult);
     </script>

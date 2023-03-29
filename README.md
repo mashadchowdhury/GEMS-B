@@ -77,6 +77,8 @@ Task: Dummy database
 
 *~~Deadline: Peer Testing Report #1 : Finished~~*
 
+Peer Testing Report #1: [link](https://docs.google.com/document/d/15U9HYuWxyQVdsa67LuT0kweCF5zkQHRDWMIWdL3WUr0/edit?usp=sharing)
+
 *~~Deadline: Prototype Video : Finished~~*
 
 ***
@@ -89,6 +91,8 @@ Task: Dummy database
 *~~March 14th: Prototype Video~~*
 
 *~~March 15th,17th: Peer Testing Session 2~~*
+
+Peer Testing Report #2: [link](https://docs.google.com/document/d/15U9HYuWxyQVdsa67LuT0kweCF5zkQHRDWMIWdL3WUr0/edit?usp=sharing)
 ***
 ## Milestone 4: Product Delivery: March 2023
 

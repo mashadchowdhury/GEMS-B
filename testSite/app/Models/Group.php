@@ -25,7 +25,14 @@ class Group extends Model
         'pet_count',
         'need_accessibility',
     ];
-    
+    public function __construct(array $attributes = [])
+    {
+        $attributes['is_ESS_group'] = $attributes['is_ESS_group'] ?? false;
+        $attributes['need_accessibility'] = $attributes['need_accessibility'] ?? false;
+        $attributes['booked'] = $attributes['booked '] ?? false;
+
+        parent::__construct($attributes);
+    }
     public function user(){
         return $this->belongsTo(User::class);
     }

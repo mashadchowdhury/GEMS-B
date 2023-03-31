@@ -37,10 +37,10 @@ class GroupController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->all();
-        /* $validated = $request->validate([
+        //$validated = $request->all();
+         $validated = $request->validate([
             'name_group' => 'required|string',
-            'booked' => 'required|boolean',
+            'booked' => 'boolean',
             'name_accommodation' => 'string',
             'name_primary_contact' => 'required|string',
             'telephone_primary_contact' => 'required|integer|max:32',
@@ -48,13 +48,13 @@ class GroupController extends Controller
             'name_secondary_contact' => 'required|string',
             'telephone_secondary_contact' => 'required|integer|max:32',
             'email_secondary_contact' => 'required|string|max:96',
-            'is_ESS_group' => 'required|boolean',
+            'is_ESS_group' => 'boolean',
             'group_count' => 'required|integer',
             'adult_count' => 'required|integer',
             'children_count' => 'required|integer',
             'pet_count' => 'required|integer',
-            'need_accessibility' => 'required|boolean', 
-        ]); */
+            'need_accessibility' => 'boolean',
+        ]);
         $request->user()->groups()->create($validated);
         return redirect(route('group.index'));
     }
@@ -110,7 +110,7 @@ class GroupController extends Controller
             'adult_count' => 'required|integer',
             'children_count' => 'required|integer',
             'pet_count' => 'required|integer',
-            'need_accessibility' => 'required|boolean', 
+            'need_accessibility' => 'required|boolean',
         ]); */
         $group->update($validated);
         return redirect(route('group.index'));

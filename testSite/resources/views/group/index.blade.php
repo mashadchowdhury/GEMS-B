@@ -29,7 +29,7 @@
                         <div class="text-sm">{{$group->name_group}}</div>
                     </th>
                     <td class="px-1 py-4 text-sm font-medium text-gray-700">
-                        <div>{{$group->booked}}</div>
+                        <div>{{$group->booked ? "Yes" : "No"}}</div>
                     </td>
                     <td class="px-1 py-4 text-sm font-medium text-gray-700">
                         <div>{{$group->name_accommodation}}</div>
@@ -53,7 +53,7 @@
                         <div>{{$group->email_secondary_contact}}</div>
                     </td>
                     <td class="px-1 py-4 text-sm font-medium text-gray-700">
-                        <div>{{$group->is_ESS_group}}</div>
+                        <div>{{$group->is_ESS_group ? "Yes" : "No"}}</div>
                     </td>
                     <td class="px-1 py-4 text-sm font-medium text-gray-700">
                         <div>{{$group->group_count}}</div>
@@ -68,7 +68,7 @@
                         <div>{{$group->pet_count}}</div>
                     </td>
                     <td class="px-1 py-4 text-sm font-medium text-gray-700">
-                        <div>{{$group->need_accessibility}}</div>
+                        <div>{{$group->need_accessibility ? "Yes" : "No"}}</div>
                     </td>
                     <td class="px-1 py-4">
                     <div class="flex justify-end">
@@ -183,6 +183,7 @@
                     type="checkbox"
                     id="booked"
                     name="booked"
+                    value="1"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="accommodation">Current Accommodation if applicable:</label><br>
@@ -246,6 +247,7 @@
                     type="checkbox"
                     id="is_ESS_group"
                     name="is_ESS_group"
+                    value="1"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="group_count">Group Headcount:</label><br>
@@ -285,6 +287,7 @@
                     type="checkbox"
                     id="need_accessibility"
                     name="need_accessibility"
+                    value="1"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <x-primary-button class="mt-4">{{ __('Create Group') }}</x-primary-button>
             </form>

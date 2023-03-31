@@ -1,4 +1,20 @@
 <x-app-layout>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.bootstrap5.min.css" integrity="sha512-Ars0BmSwpsUJnWMw+KoUKGKunT7+T8NGK0ORRKj+HT8naZzLSIQoOSIIM3oyaJljgLxFi0xImI5oZkAWEFARSA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"
+        integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        ></script>
+        <script>
+            $(document).ready(function () {
+                $('select').selectize({
+                    sortField: 'text'
+                });
+            });
+        </script>
+    </head>
     <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
         <form method="POST" action="{{ route('accommodation.update', $accommodation) }}">
             @csrf
@@ -20,6 +36,14 @@
                 placeholder="{{ __('Eg: 1800 Main St.') }}"
                 value="{{$accommodation->address}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+            <br>
+            <label for="region">Location/Region:</label><br>
+            <select id="name_region" name="name_region" placeholder="{{ __('Eg: Kelowna') }}" class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">>
+                <option value="{{$accommodation->name_region}}">{{$accommodation->name_region}}</option>
+                @foreach ($regions as $regions)
+                <option value="{{$regions->name_region}}">{{$regions->name_region}}</option>
+                @endforeach
+            </select>
             <br>
             <label for="email_accommodation">Email of Accommodation:</label><br>
             <input
@@ -183,14 +207,14 @@
             <br>
             @endif
 
-            <label for="region">Location/Region:</label><br>
-            <input
+            
+            <!-- <input
                 type="text"
                 id="name_region"
                 name="name_region"
                 placeholder="{{ __('Eg: Kelowna') }}"
                 value="{{$accommodation->name_region}}"
-                class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"> -->
             <div class="mt-4 space-x-2">
                 <x-primary-button>{{ __('Save') }}</x-primary-button>
                 <a href="{{ route('accommodation.index') }}">{{ __('Cancel') }}</a>

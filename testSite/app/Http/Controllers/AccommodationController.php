@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Region;
 use App\Models\Accommodation;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,10 @@ class AccommodationController extends Controller
      */
     public function index()
     {
+        $region_name = Region::select("name_region")->get();
         return view('accommodation.index', [
             'accommodation' => Accommodation::with('user')->latest()->get(),
+            'regions' => $region_name
         ]);
     }
 
@@ -76,9 +79,11 @@ class AccommodationController extends Controller
      */
     public function edit(Accommodation $accommodation)
     {
+        $region_name = Region::select("name_region")->get();
         $this->authorize('update', $accommodation);
         return view('accommodation.edit', [
             'accommodation' => $accommodation,
+            'regions' => $region_name
         ]);
     }
 

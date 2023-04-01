@@ -56,6 +56,13 @@ class AccommodationController extends Controller
             'name_region' => 'required|string',
         ]);
 
+        //update available rooms in regions table on accommodation creation
+        $region_rooms = Region::select('available_rooms')->where('name_region', '=', $validated['name_region'])->get(); 
+        $region_accomm = Region::select('amount_accommodations')->where('name_region', '=', $validated['name_region'])->get(); 
+        $region_rooms = $region_rooms->value('available_rooms');
+        $region_accomm = $region_accomm->value('amount_accommodations');      
+        Region::where('name_region', '=', $validated['name_region'])->update(['available_rooms' => $region_rooms + $validated['number_of_rooms'],'amount_accommodations' => $region_accomm + 1]);
+
         $request->user()->accommodations()->create($validated);
         return redirect(route('accommodation.index'));
     }
@@ -113,6 +120,14 @@ class AccommodationController extends Controller
             'accessibility_walker' => 'required|boolean',
             'name_region' => 'required|string',
         ]); */
+        $region_rooms = Region::select('available_rooms')->where('name_region', '=', $accommodation->name_region)->get(); 
+        $region_rooms = $region_rooms->value('available_rooms');
+        $curr_accomm_rooms = Accommodation::select('number_of_rooms')->where('name_accommodation', '=', $accommodation->name_accommodation)->get();
+        $curr_accomm_rooms = $curr_accomm_rooms->value('number_of_rooms');
+
+        $room_num_difference = $curr_accomm_rooms - $validated['number_of_rooms'];
+        Region::where('name_region', '=', $accommodation->name_region)->update(['available_rooms'=> $region_rooms - $room_num_difference]);
+
         $accommodation->update($validated);
         return redirect(route('accommodation.index'));
     }
@@ -125,6 +140,14 @@ class AccommodationController extends Controller
      */
     public function destroy(Accommodation $accommodation)
     {
+        //update available rooms in regions table on accommodation deletion
+        $region_rooms = Region::select('available_rooms')->where('name_region', '=', $accommodation->name_region)->get(); 
+        $region_accomm = Region::select('amount_accommodations')->where('name_region', '=', $accommodation->name_region)->get(); 
+        $region_rooms = $region_rooms->value('available_rooms'); 
+        $region_accomm = $region_accomm->value('amount_accommodations');      
+        Region::where('name_region', '=', $accommodation->name_region)->update(['available_rooms' => $region_rooms - $accommodation->number_of_rooms,'amount_accommodations' => $region_accomm - 1]);
+
+
         $this->authorize('delete', $accommodation);
         $accommodation->delete();
         return redirect(route('accommodation.index'));

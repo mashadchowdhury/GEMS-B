@@ -116,7 +116,7 @@
             <label for="need_accessibility">Accessibility Needs?:</label>
             <input 
                 type="checkbox" 
-                id="need_accessibility" 
+                id="need_accessibility"  
                 name="need_accessibility" 
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <div class="mt-4 space-x-2">

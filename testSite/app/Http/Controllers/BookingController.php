@@ -17,8 +17,13 @@ class BookingController extends Controller
      */
     public function index()
     {
+
+        $available_groups = Group::select('name_group')->get();
+        $available_accommodations = Accommodation::select('name_accommodation')->get();
         return view('booking.index', [
             'booking' => Booking::with('user')->latest()->get(),
+            'groups' => $available_groups, 
+            'accommodations' => $available_accommodations
         ]);
     }
 
@@ -57,6 +62,7 @@ class BookingController extends Controller
         $region_accomm = $num_bookings->value("amount_accommodations");
         $num_bookings = $num_bookings->value('amount_bookings');
 
+        //if number of beds is the same as group size remove from available accommodation in regions table
         if($accom_num == $group_size){
             Region::where('name_region', '=', $region_name)->update(["amount_accommodations" => $region_accomm - 1]);
         }
@@ -94,9 +100,13 @@ class BookingController extends Controller
      */
     public function edit(Booking $booking)
     {
+        $available_groups = Group::select('name_group')->get();
+        $available_accommodations = Accommodation::select('name_accommodation')->get();
         $this->authorize('update', $booking);
         return view('booking.edit', [
             'booking' => $booking,
+            'groups' => $available_groups, 
+            'accommodations' => $available_accommodations
         ]);
     }
 

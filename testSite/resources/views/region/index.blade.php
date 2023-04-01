@@ -1,4 +1,4 @@
-<x-app-layout> 
+<x-app-layout>  
     <div class="relative mt-2 flex">
         <div class="relative flex-auto m-5 p-5 w-full h-full bg-gray-400 overflow-y-auto overflow-x-hidden rounded-lg border border-gray-200 shadow-md">
             <!-- Main Body --> 

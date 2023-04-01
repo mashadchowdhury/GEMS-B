@@ -179,16 +179,12 @@
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="booked">Booked Status:</label>
-                <input type="hidden" name="booked" value="No">
+                <!-- <input type="hidden" name="booked" value="No"> -->
                 <input
                     type="checkbox"
                     id="booked"
                     name="booked"
-<<<<<<< HEAD
                     value="1"
-=======
-                    value="Yes"
->>>>>>> db849b6f51b53f192370c43f359cdcd1cc2420df
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="accommodation">Current Accommodation if applicable:</label><br>
@@ -248,16 +244,12 @@
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="is_ESS_group">ESS:</label>
-                <input type="hidden" name="is_ESS_group" value="No">
+                <!-- <input type="hidden" name="is_ESS_group" value="No"> -->
                 <input
                     type="checkbox"
                     id="is_ESS_group"
                     name="is_ESS_group"
-<<<<<<< HEAD
                     value="1"
-=======
-                    value="Yes"
->>>>>>> db849b6f51b53f192370c43f359cdcd1cc2420df
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="group_count">Group Headcount:</label><br>
@@ -293,16 +285,12 @@
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="need_accessibility">Accessibility Needs?:</label>
-                <input type="hidden" name="need_accessibility" value="No">
+                <!-- <input type="hidden" name="need_accessibility" value="No"> -->
                 <input
                     type="checkbox"
                     id="need_accessibility"
                     name="need_accessibility"
-<<<<<<< HEAD
                     value="1"
-=======
-                    value="Yes"
->>>>>>> db849b6f51b53f192370c43f359cdcd1cc2420df
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <x-primary-button class="mt-4">{{ __('Create Group') }}</x-primary-button>
             </form>

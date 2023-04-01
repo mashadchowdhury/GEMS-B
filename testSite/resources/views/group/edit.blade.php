@@ -13,27 +13,13 @@
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="booked">Booked Status:</label>
-<<<<<<< HEAD
-            <input
-                type="checkbox"
-                id="booked"
-                name="booked"
-                value="1"
-                class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
-            <br>
-            <label for="accommodation">Current Accommodation if applicable:</label><br>
-            <input
-                type="text"
-                id="name_accommodation"
-                name="name_accommodation"
-=======
-            <input type="hidden" name="booked" value="No">
-            @if($group->booked == "Yes")
+            <input type="hidden" name="booked" value="0">
+            @if($group->booked == "1")
             <input 
                 type="checkbox" 
                 id="booked" 
                 name="booked" 
-                value="Yes"
+                value="1"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                 checked>
             <br>
@@ -42,7 +28,7 @@
                 type="checkbox" 
                 id="booked" 
                 name="booked" 
-                value="Yes"
+                value="1"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             @endif
@@ -52,7 +38,6 @@
                 type="text" 
                 id="name_accommodation" 
                 name="name_accommodation" 
->>>>>>> db849b6f51b53f192370c43f359cdcd1cc2420df
                 placeholder="{{ __('Eg: Hyatt Place') }}"
                 value="{{$group->name_accommodation}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
@@ -112,20 +97,13 @@
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="is_ESS_group">ESS:</label>
-<<<<<<< HEAD
-            <input
-                type="checkbox"
-                id="is_ESS_group"
-                name="is_ESS_group"
-                value="1"
-=======
-            <input type="hidden" name="is_ESS_group" value="No">
-            @if($group->is_ESS_group == "Yes")
+            <input type="hidden" name="is_ESS_group" value="0">
+            @if($group->is_ESS_group == "1")
             <input 
                 type="checkbox" 
                 id="is_ESS_group" 
                 name="is_ESS_group" 
-                value="Yes"
+                value="1"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                 checked>
             <br>
@@ -134,8 +112,7 @@
                 type="checkbox" 
                 id="is_ESS_group" 
                 name="is_ESS_group" 
-                value="Yes"
->>>>>>> db849b6f51b53f192370c43f359cdcd1cc2420df
+                value="1"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             @endif
@@ -177,20 +154,13 @@
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="need_accessibility">Accessibility Needs?:</label>
-<<<<<<< HEAD
-            <input
-                type="checkbox"
-                id="need_accessibility"
-                name="need_accessibility"
-                value="1"
-=======
-            <input type="hidden" name="need_accessibility" value="No">
-            @if($group->need_accessibility == "Yes")
+            <input type="hidden" name="need_accessibility" value="0">
+            @if($group->need_accessibility == "1")
             <input 
                 type="checkbox" 
                 id="need_accessibility" 
                 name="need_accessibility" 
-                value="Yes"
+                value="1"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                 checked>
             @else
@@ -198,8 +168,7 @@
                 type="checkbox" 
                 id="need_accessibility" 
                 name="need_accessibility" 
-                value="Yes"
->>>>>>> db849b6f51b53f192370c43f359cdcd1cc2420df
+                value="1"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             @endif
 

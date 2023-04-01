@@ -133,33 +133,10 @@
                     name="name_region"
                     placeholder="{{ __('Eg: West Kelowna') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
-                <!-- <br> -->
-                <!-- <label for="amount_accommodations">Amount of Available Accommodations:</label><br> -->
                 <input type="hidden" id="amount_accommodations" name="amount_accommodations" value="0"/>
-                <!-- <input
-                    type="text"
-                    id="amount_accommodations"
-                    name="amount_accommodations"
-                    placeholder="{{ __('Eg: 7') }}"
-                    class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
-                <br> -->
-                <!-- <label for="amount_bookings">Amount of Current Bookings:</label><br> -->
                 <input type="hidden" id="amount_bookings" name="amount_bookings" value="0"/>
-                <!-- <input
-                    type="text"
-                    id="amount_bookings"
-                    name="amount_bookings"
-                    placeholder="{{ __('Eg: 40') }}"
-                    class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
-                <br> -->
-                <!-- <label for="available_rooms">Amount of Available Rooms:</label><br> -->
                 <input type="hidden" id="available_rooms" name="available_rooms" value="0"/>
-                <!-- <input
-                    type="text"
-                    id="available_rooms"
-                    name="available_rooms"
-                    placeholder="{{ __('Eg: 83') }}"
-                    class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"> -->
+                
                 <x-primary-button class="mt-4">{{ __('Create Region') }}</x-primary-button>
             </form>
         </span>

@@ -8,7 +8,6 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\str;
 use Illuminate\Database\QueryException;
 
-
 class Admin extends Seeder
 {
     /**

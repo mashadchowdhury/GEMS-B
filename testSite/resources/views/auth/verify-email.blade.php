@@ -7,6 +7,7 @@
             {{ __('A new verification link has been sent to the email address you provided during registration.') }}
         </div>
     @endif
+    
 
     <div class="mt-4 flex items-center justify-between">
         <form method="POST" action="{{ route('verification.send') }}">

@@ -1,6 +1,7 @@
 <?php
- 
+
 namespace App\Models;
+
 
 use App\Events\ChirpCreated;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

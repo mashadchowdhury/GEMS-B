@@ -5,21 +5,21 @@
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
                 <thead class="bg-gray-50">
                 <tr>
-                    <th scope="col" class="px-1 py-4">Name</th>
-                    <th scope="col" class="px-1 py-4">Booked</th>
-                    <th scope="col" class="px-1 py-4">Accommodation</th>
-                    <th scope="col" class="px-1 py-4">Primary Contact</th>
-                    <th scope="col" class="px-1 py-4">Primary Phone</th>
-                    <th scope="col" class="px-1 py-4">Primary Email</th>
-                    <th scope="col" class="px-1 py-4">Secondary Contact</th>
-                    <th scope="col" class="px-1 py-4">Secondary Phone</th>
-                    <th scope="col" class="px-1 py-4">Secondary Email</th>
-                    <th scope="col" class="px-1 py-4">ESS-Group</th>
-                    <th scope="col" class="px-1 py-4">Headcount</th>
-                    <th scope="col" class="px-1 py-4">Adult Count</th>
-                    <th scope="col" class="px-1 py-4">Child Count</th>
-                    <th scope="col" class="px-1 py-4">Pet Count</th>
-                    <th scope="col" class="px-1 py-4">Accessibility Needs</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Name</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Booked</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Accommodation</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Primary Contact</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Primary Phone</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Primary Email</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Secondary Contact</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Secondary Phone</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Secondary Email</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">ESS-Group</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Headcount</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Adult Count</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Child Count</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Pet Count</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Accessibility Needs</th>
                 </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100 border-t border-gray-100">
@@ -136,7 +136,7 @@
                             results
                         </p>
                     </div>
-                    <div>
+                    {{-- <div>
                         <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
                             <a href="#" class="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">
                             <span class="sr-only">Previous</span>
@@ -161,7 +161,7 @@
                             </svg>
                             </a>
                         </nav>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

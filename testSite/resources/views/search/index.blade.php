@@ -2,9 +2,14 @@
     <script>
         console.log($searchResult);
     </script>
+    {{-- @if ( empty($searchResult) )
+        <div class="max-w-2xl mx-2 p-4 sm:p-6 lg:p-8 bg-white rounded-lg border border-gray-200 shadow-md">
+            No results found
+        </div>
+    @endif --}}
     <div>
         @foreach ($region as $region)
-        <p class="mt-4 text-lg text-gray-900">
+        <p class="mt-4 text-lg text-gray-900 max-w-2xl mx-2 p-4 sm:p-6 lg:p-8 bg-white rounded-lg border border-gray-200 shadow-md">
             <b>{{$region->name_region}}</b>
             <br>Available Accommodations:
             {{$region->amount_accommodations}}
@@ -17,7 +22,7 @@
     </div>
     <div>
         @foreach ($group as $group)
-        <p class="mt-4 text-lg text-gray-900">
+        <p class="mt-4 text-lg text-gray-900 max-w-2xl mx-2 p-4 sm:p-6 lg:p-8 bg-white rounded-lg border border-gray-200 shadow-md">
             <b>{{$group->name_group}}</b>
             <br>Available Accommodations:
             {{$group->booked}}
@@ -50,9 +55,33 @@
     </div>
     <div>
         @foreach ($accommodation as $accommodation)
-        <p>
+        <p class="mt-4 text-lg text-gray-900 max-w-2xl mx-2 p-4 sm:p-6 lg:p-8 bg-white rounded-lg border border-gray-200 shadow-md">
             <br>Accommodation Name: 
             <b>{{$accommodation->name_accommodation}}</b>
+            <br>Region Location:
+            {{$accommodation->name_region}}
+            <br>Address:
+            {{$accommodation->address}}
+            <br>Email:
+            {{$accommodation->email_accommodation}}
+            <br>Room Type:
+            {{$accommodation->room_type}}
+            <br>Number of Rooms:
+            {{$accommodation->number_of_rooms}}
+            <br>Number of Beds:
+            {{$accommodation->number_of_beds}}
+            <br>ESS Support:
+            {{$accommodation->ESS_support}}
+            <br>Nearby Restaurants:
+            {{$accommodation->restaurant_available}}
+            <br>Pet-friendly:
+            {{$accommodation->pets_allowed}}
+            <br>Disability Access:
+            {{$accommodation->accessibility_available}}
+            <br>Wheelchair Access:
+            {{$accommodation->accessibility_wheelchair}}
+            <br>Walker Access:
+            {{$accommodation->accessibility_walker}}
         </p>
         @endforeach
     </div>

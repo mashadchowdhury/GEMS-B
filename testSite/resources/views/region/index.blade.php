@@ -14,9 +14,9 @@
                 <tbody class="divide-y divide-gray-100 border-t border-gray-100">
                 @foreach ($region as $region)
                 <tr class="hover:bg-gray-50 text-center">
-                    <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
+                    <td class="flex gap-3 px-6 py-4 font-normal text-gray-900">
                         <div class="text-sm">{{$region->name_region}}</div>
-                    </th>
+                    </td>
                     <td class="px-6 py-4 text-sm font-medium text-gray-700">
                         <div>{{$region->amount_accommodations}}</div>
                     </td>

@@ -15,7 +15,8 @@
             });
         </script>
     </head>
-    <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
+    <br>
+    <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8 text-sm bg-white rounded-lg border border-gray-200 shadow-md">
         <form method="POST" action="{{ route('accommodation.update', $accommodation) }}">
             @csrf
             @method('patch')

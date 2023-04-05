@@ -45,72 +45,68 @@
             
             <div class="max-w-8xl mx-auto sm:px-6 lg:px-8">
                 <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-            <section class="text-gray-900 bg-gray-0 body-font relative">
-                <!--Page Content-->
-                <form class="form-horizontal form-contact clearfix" action="https://formspree.io/f/mqkwelpl" method="POST">
-                <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
-                    <div class="lg:w-2/3 md:w-1/2 bg-gray-0 rounded-lg overflow-hidden sm:mr-10 p-10 flex justify-start relative">
-                    <div class="bg-gray-0 relative flex flex-wrap py-6 rounded shadow-md">
-                    <img src="{{ asset('images/GEMSTagline.svg') }}" width="700" height="350" />
-                        <div class="lg:w-1/2 px-6">
-                        <h2 class="title-font font-semibold text-black tracking-widest text-xs">ADDRESS</h2>
-                        <p class="mt-1 text-orange-400 leading-relaxed">Proudly serving the Okanagan</p>
-                        <h2 class="title-font font-semibold text-black tracking-widest text-xs mt-4">WEBSITE</h2>
-                        <p class="mt-1 text-orange-400 leading-relaxed">https://glohaven.com/</p>
+                    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                        <section class="text-gray-900 bg-gray-0 body-font relative">
+                            <!--Page Content-->
+                            <form class="form-horizontal form-contact clearfix" action="https://formspree.io/f/mqkwelpl" method="POST">
+                            <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+                                <div class="lg:w-2/3 md:w-1/2 bg-gray-0 rounded-lg overflow-hidden sm:mr-10 p-10 flex justify-start relative">
+                                <div class="bg-gray-0 relative flex flex-wrap py-6 rounded shadow-md">
+                                <img src="{{ asset('images/GEMSTagline.svg') }}" width="700" height="350" />
+                                    <div class="lg:w-1/2 px-6">
+                                    <h2 class="title-font font-semibold text-black tracking-widest text-xs">ADDRESS</h2>
+                                    <p class="mt-1 text-orange-400 leading-relaxed">Proudly serving the Okanagan</p>
+                                    <h2 class="title-font font-semibold text-black tracking-widest text-xs mt-4">WEBSITE</h2>
+                                    <p class="mt-1 text-orange-400 leading-relaxed">https://glohaven.com/</p>
+                                    </div>
+                                    <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                                    <h2 class="title-font font-semibold text-black tracking-widest text-xs">EMAIL</h2>
+                                    <a class="text-orange-400 leading-relaxed">george@glohaven.com</a>
+                                    <h2 class="title-font font-semibold text-black tracking-widest text-xs mt-4">PHONE</h2>
+                                    <p class="text-orange-400 leading-relaxed">(250)-503-6126</p>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+                                <h2 class="text-black text-lg mb-1 font-medium title-font">Apply for a reservation</h2>
+                                <p class="leading-relaxed mb-5"></p>
+                                <div class="relative mb-4">
+                                    <label for="name" class="leading-7 text-sm text-gray-400">Name</label>
+                                    <input type="text" id="name" name="Name" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                </div>
+                                <div class="relative mb-4">
+                                    <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
+                                    <input type="email" id="email" name="E-mail Address" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                </div>
+                                <div class="relative mb-4">
+                                    <label for="phone" class="leading-7 text-sm text-gray-400">Phone Number</label>
+                                    <input type="tel" id="phone" name="Phone Number" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                </div>
+                                <div class="relative mb-4">
+                                    <label for="numpeople" class="leading-7 text-sm text-gray-400">Number of People</label>
+                                    <input type="number" id="numpeople" name="Number Of People" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                </div>
+                                <div class="relative mb-4">
+                                    <label for="region" class="leading-7 text-sm text-gray-400">Location Requested</label>
+                                    <input type="text" id="region" name="Location Requested" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                </div>
+                                <div class="relative mb-4">
+                                    <label for="checkinout" class="leading-7 text-sm text-gray-400">Check In and Check Out Date</label>
+                                    <input type="date" id="checkin" name="Check-in Date" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                    <input type="date" id="checkout" name="Check-out Date" min ="2023-03-15" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                </div>
+                                
+                                <button class="text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg">Submit Request</button>
+                                <p class="text-xs text-gray-400 text-opacity-90 mt-3">© 2023, Glohaven Community Hub Powered by Glohaven Community Hub</p>
+                                </div>
+                            </div>
+                            </form>
+                        </section>
                         </div>
-                        <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                        <h2 class="title-font font-semibold text-black tracking-widest text-xs">EMAIL</h2>
-                        <a class="text-orange-400 leading-relaxed">george@glohaven.com</a>
-                        <h2 class="title-font font-semibold text-black tracking-widest text-xs mt-4">PHONE</h2>
-                        <p class="text-orange-400 leading-relaxed">(250)-503-6126</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-                    <h2 class="text-black text-lg mb-1 font-medium title-font">Apply for a reservation</h2>
-                    <p class="leading-relaxed mb-5"></p>
-                    <div class="relative mb-4">
-                        <label for="name" class="leading-7 text-sm text-gray-400">Name</label>
-                        <input type="text" id="name" name="Name" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                    </div>
-                    <div class="relative mb-4">
-                        <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
-                        <input type="email" id="email" name="E-mail Address" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                    </div>
-                    <div class="relative mb-4">
-                        <label for="phone" class="leading-7 text-sm text-gray-400">Phone Number</label>
-                        <input type="tel" id="phone" name="Phone Number" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                    </div>
-                    <div class="relative mb-4">
-                        <label for="numpeople" class="leading-7 text-sm text-gray-400">Number of People</label>
-                        <input type="number" id="numpeople" name="Number Of People" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                    </div>
-                    <div class="relative mb-4">
-                        <label for="region" class="leading-7 text-sm text-gray-400">Location Requested</label>
-                        <input type="text" id="region" name="Location Requested" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                    </div>
-                    <div class="relative mb-4">
-                        <label for="checkinout" class="leading-7 text-sm text-gray-400">Check In and Check Out Date</label>
-                        <input type="date" id="checkin" name="Check-in Date" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                        <input type="date" id="checkout" name="Check-out Date" min ="2023-03-15" class="w-full bg-gray-0 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                    </div>
-                    
-                    <button class="text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg">Submit Request</button>
-                    <p class="text-xs text-gray-400 text-opacity-90 mt-3">© 2023, Glohaven Community Hub Powered by Glohaven Community Hub</p>
                     </div>
                 </div>
-                </form>
-            </section>
             </div>
-        </div>
-    </div>
-            </div>
-        </div>
-                
-        
-                
-                
+        </div>          
     </body>
 </html>

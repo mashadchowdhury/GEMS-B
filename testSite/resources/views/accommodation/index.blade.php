@@ -21,23 +21,24 @@
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
                 <?php
                     $count = DB::table('accommodations')->count();
-                    $current = 1;
+                    //$current = 1;
+                    // $accommodation = DB::table('accommodations')->paginate(20);
                 ?>
                 <thead class="bg-gray-50">
                 <tr>
-                    <th scope="col" class="px-1 py-4">Accommodation</th>
-                    <th scope="col" class="px-1 py-4">Region Location</th>
-                    <th scope="col" class="px-1 py-4">Address</th>
-                    <th scope="col" class="px-1 py-4">Email</th>
-                    <th scope="col" class="px-1 py-4">Room Type</th>
-                    <th scope="col" class="px-1 py-4">Number of Rooms</th>
-                    <th scope="col" class="px-1 py-4">Number of Beds</th>
-                    <th scope="col" class="px-1 py-4">ESS Support</th>
-                    <th scope="col" class="px-1 py-4">Nearby Restaurants</th>
-                    <th scope="col" class="px-1 py-4">Pet-friendly</th>
-                    <th scope="col" class="px-1 py-4">Disability Access</th>
-                    <th scope="col" class="px-1 py-4">Wheelchair Access</th>
-                    <th scope="col" class="px-1 py-4">Walker Access</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Accommodation</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Region Location</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Address</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Email</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Room Type</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Number of Rooms</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Number of Beds</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">ESS Support</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Nearby Restaurants</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Pet-friendly</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Disability Access</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Wheelchair Access</th>
+                    <th scope="col" class="px-1 py-4 font-bold text-black">Walker Access</th>
                 </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100 border-t border-gray-100">
@@ -146,7 +147,7 @@
                             results
                         </p>
                     </div>
-                    <div>
+                    {{-- <div>
                         <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
                             <a href="#" class="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">
                             <span class="sr-only">Previous</span>
@@ -155,16 +156,26 @@
                                 <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd" />
                             </svg>
                             </a>
+                            <?php
+                            // PHP variable to be changed
+                            $current = "1";
+                            ?>
+                            <div x-data="{ myVar: '<?php echo $current; ?>' }">
+                                <p>Current value of current: <span x-text="current"></span></p>
+                                <button @click="current = '2'">Change current</button>
+                            </div>
                             <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
                                 <!-- show ceil($count/20) buttons -->
                             <?php
                                 $count = 55;
                                 for ($i=1;$i <= ceil($count/20); $i++){
                                     if ($i == $current){
-                                        echo "<a href='#' class='relative z-10 inline-flex items-center border border-indigo-500 bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-600 focus:z-20'>$i</a>";
+                                        echo "<button @click='current = i' class='relative z-10 inline-flex items-center border border-indigo-500 bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-600 focus:z-20'>$i</button>";
+                                        echo $current;
                                     }
                                     else{
-                                        echo "<a href='#' class='relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20'>$i</a>";
+                                        echo "<button @click='current=i' class='relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20'>$i</button>";
+                                        echo $current;
                                     }
                                     
                                 }
@@ -185,7 +196,7 @@
                             </svg>
                             </a>
                         </nav>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

@@ -68,13 +68,16 @@ class BookingController extends Controller
         }
 
         /*could implement script or something in booking view to take data passed along with this return to run the alert from
-        from with in the view file*/ 
+        from with in the view file
+        could also return view with msg then use isset in page to display the alert*/ 
         if($accom_num < $group_size){
             $msg = "Group size too large for this accommodation";
             echo "<script type='text/javascript'>alert('$msg');</script>";
             return redirect(route('booking.index'));
+            // return redirect()->back()->with('status',"Group size too large for this accommodation");
         }
         
+        Group::where('name_group','=', $validated['name_group'])->update(['name_accommodation' => $validated['name_accommodation']]);
         Region::where('name_region', '=', $region_name)->update(["amount_bookings" => $num_bookings + 1]);
         Accommodation::where('name_accommodation', '=', $validated['name_accommodation'])->update(['number_of_beds' => $accom_num - $group_size]);
         $request->user()->bookings()->create($validated);
@@ -153,6 +156,7 @@ class BookingController extends Controller
             Region::where('name_region', '=', $region_name)->update(["amount_accommodations" => $region_accomm + 1]);
         }
         
+        Group::where('name_group','=', $booking->name_group)->update(['name_accommodation' => 'None']);
         Region::where('name_region', '=', $region_name)->update(["amount_bookings" => $num_bookings - 1]);
         Accommodation::where('name_accommodation', '=', $booking->name_accommodation)->update(['number_of_beds' => $accom_num + $group_size]);
         $this->authorize('delete', $booking);

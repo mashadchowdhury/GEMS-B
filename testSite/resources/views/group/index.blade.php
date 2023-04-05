@@ -178,8 +178,10 @@
                     placeholder="{{ __('Eg: South Bend EMS') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
-                <label for="booked">Booked Status:</label>
-                <!-- <input type="hidden" name="booked" value="No"> -->
+                <input type="hidden" name="booked" value="1">
+                <input type="hidden" name="name_accommodation" value="None">
+                <!-- <label for="booked">Booked Status:</label>
+                
                 <input
                     type="checkbox"
                     id="booked"
@@ -194,7 +196,7 @@
                     name="name_accommodation"
                     placeholder="{{ __('Eg: Hyatt Place') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
-                <br>
+                <br> -->
                 <label for="telephone_primary_contact">Name of Primary Contact:</label><br>
                 <input
                     type="text"

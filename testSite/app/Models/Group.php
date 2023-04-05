@@ -29,7 +29,7 @@ class Group extends Model
     {
         $attributes['is_ESS_group'] = $attributes['is_ESS_group'] ?? false;
         $attributes['need_accessibility'] = $attributes['need_accessibility'] ?? false;
-        $attributes['booked'] = $attributes['booked '] ?? false;
+        $attributes['booked'] = $attributes['booked'] ?? false;
 
         parent::__construct($attributes);
     }

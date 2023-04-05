@@ -19,6 +19,10 @@
         <div class="relative flex-auto m-5 p-5 w-full h-full overflow-y-auto overflow-x-hidden rounded-lg border border-gray-200 shadow-md"style="overflow: auto;">
             <!-- Main Body -->
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
+                <?php
+                    $count = DB::table('accommodations')->count();
+                    $current = 1;
+                ?>
                 <thead class="bg-gray-50">
                 <tr>
                     <th scope="col" class="px-1 py-4">Accommodation</th>
@@ -37,6 +41,7 @@
                 </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100 border-t border-gray-100">
+                    <!--if click i, show 1+(i-1)*20 to 20+(i-1)*20 -->
                 @foreach ($accommodation as $accommodation)
                 <tr class="hover:bg-gray-50">
                     <th class="flex gap-3 px-1 py-4 font-normal text-gray-900">
@@ -114,9 +119,6 @@
                 <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
                     <div>
                         <p class="text-sm text-gray-700">
-                            <?php
-                                $count = DB::table('accommodations')->count();
-                            ?>
                             Showing
                             <span class="font-medium">
                                 <?php
@@ -154,6 +156,20 @@
                             </svg>
                             </a>
                             <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
+                                <!-- show ceil($count/20) buttons -->
+                            <?php
+                                $count = 55;
+                                for ($i=1;$i <= ceil($count/20); $i++){
+                                    if ($i == $current){
+                                        echo "<a href='#' class='relative z-10 inline-flex items-center border border-indigo-500 bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-600 focus:z-20'>$i</a>";
+                                    }
+                                    else{
+                                        echo "<a href='#' class='relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20'>$i</a>";
+                                    }
+                                    
+                                }
+                            ?>
+                            <!--
                             <a href="#" aria-current="page" class="relative z-10 inline-flex items-center border border-indigo-500 bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-600 focus:z-20">1</a>
                             <a href="#" class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">2</a>
                             <a href="#" class="relative hidden items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 md:inline-flex">3</a>
@@ -161,7 +177,7 @@
                             <a href="#" class="relative hidden items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 md:inline-flex">8</a>
                             <a href="#" class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">9</a>
                             <a href="#" class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">10</a>
-                            <a href="#" class="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">
+                            --><a href="#" class="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">
                             <span class="sr-only">Next</span>
                             <!-- Heroicon name: mini/chevron-right -->
                             <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">

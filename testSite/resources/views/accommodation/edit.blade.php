@@ -66,20 +66,22 @@
             <br>
             <label for="number_of_rooms">Number of Rooms:</label><br>
             <input
-                type="text"
+                type="number"
                 id="number_of_rooms"
                 name="number_of_rooms"
                 placeholder="{{ __('Eg: 23') }}"
                 value="{{$accommodation->number_of_rooms}}"
+                min="0"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="number_of_beds">Number of Beds:</label><br>
             <input
-                type="text"
+                type="number"
                 id="number_of_beds"
                 name="number_of_beds"
                 placeholder="{{ __('Eg: 58') }}"
                 value="{{$accommodation->number_of_beds}}"
+                min="0"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
             <label for="ESS_support">ESS Supported here?:</label>

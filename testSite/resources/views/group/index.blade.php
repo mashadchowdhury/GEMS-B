@@ -256,34 +256,38 @@
                 <br>
                 <label for="group_count">Group Headcount:</label><br>
                 <input
-                    type="text"
+                    type="number"
                     id="group_count"
                     name="group_count"
                     placeholder="{{ __('Eg: 20') }}"
+                    min="0"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="adult_count">Adult Headcount:</label><br>
                 <input
-                    type="text"
+                    type="number"
                     id="adult_count"
                     name="adult_count"
                     placeholder="{{ __('Eg: 20') }}"
+                    min="0"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="children_count">Child Under-18 Headcount:</label><br>
                 <input
-                    type="text"
+                    type="number"
                     id="children_count"
                     name="children_count"
                     placeholder="{{ __('Eg: 20') }}"
+                    min="0"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="pet_count">Pet Headcount:</label><br>
                 <input
-                    type="text"
+                    type="number"
                     id="pet_count"
                     name="pet_count"
                     placeholder="{{ __('Eg: 20') }}"
+                    min="0"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
                 <label for="need_accessibility">Accessibility Needs?:</label>

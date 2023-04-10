@@ -70,7 +70,8 @@
                 value="{{$group->email_primary_contact}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
-            <label for="name_secondary_contact">Name of Secondary Contact:</label><br>
+            <label for="name_secondary_contact">Name of Secondary Contact (Optional):</label><br>
+            @if($group->name_secondary_contact != "None")
             <input
                 type="text"
                 id="name_secondary_contact"
@@ -78,8 +79,17 @@
                 placeholder="{{ __('Eg: Jane Smith') }}"
                 value="{{$group->name_secondary_contact}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+            @else
+            <input
+                type="text"
+                id="name_secondary_contact"
+                name="name_secondary_contact"
+                placeholder="{{ __('Eg: Jane Smith') }}"
+                class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+            @endif
             <br>
-            <label for="telephone_secondary_contact">Phone of Secondary Contact:</label><br>
+            <label for="telephone_secondary_contact">Phone of Secondary Contact (Optional):</label><br>
+            @if($group->telephone_secondary_contact != "None")
             <input
                 type="text"
                 id="telephone_secondary_contact"
@@ -87,8 +97,17 @@
                 placeholder="{{ __('Eg: 555-555-5555') }}"
                 value="{{$group->telephone_secondary_contact}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+            @else
+            <input
+                type="text"
+                id="telephone_secondary_contact"
+                name="telephone_secondary_contact"
+                placeholder="{{ __('Eg: 555-555-5555') }}"
+                class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+            @endif
             <br>
-            <label for="email_secondary_contact">Email of Secondary Contact:</label><br>
+            <label for="email_secondary_contact">Email of Secondary Contact (Optional):</label><br>
+            @if($group->email_secondary_contact != "None")
             <input
                 type="email"
                 id="email_secondary_contact"
@@ -96,6 +115,14 @@
                 placeholder="{{ __('Eg: frontdesk@company.com') }}"
                 value="{{$group->email_secondary_contact}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+            @else
+            <input
+                type="email"
+                id="email_secondary_contact"
+                name="email_secondary_contact"
+                placeholder="{{ __('Eg: frontdesk@company.com') }}"
+                class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+            @endif
             <br>
             <label for="is_ESS_group">ESS:</label>
             <input type="hidden" name="is_ESS_group" value="0">

@@ -221,7 +221,7 @@
                     placeholder="{{ __('Eg: frontdesk@company.com') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
-                <label for="name_secondary_contact">Name of Secondary Contact:</label><br>
+                <label for="name_secondary_contact">Name of Secondary Contact (Optional):</label><br>
                 <input
                     type="text"
                     id="name_secondary_contact"
@@ -229,7 +229,7 @@
                     placeholder="{{ __('Eg: Jane Smith') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
-                <label for="telephone_secondary_contact">Phone of Secondary Contact:</label><br>
+                <label for="telephone_secondary_contact">Phone of Secondary Contact (Optional):</label><br>
                 <input
                     type="text"
                     id="telephone_secondary_contact"
@@ -237,7 +237,7 @@
                     placeholder="{{ __('Eg: 555-555-5555') }}"
                     class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                 <br>
-                <label for="email_secondary_contact">Email of Secondary Contact:</label><br>
+                <label for="email_secondary_contact">Email of Secondary Contact (Optional):</label><br>
                 <input
                     type="email"
                     id="email_secondary_contact"

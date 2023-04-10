@@ -55,6 +55,13 @@ class GroupController extends Controller
         //     'pet_count' => 'required|integer',
         //     'need_accessibility' => 'boolean',
         // ]);
+        
+        //make secondary contact optional
+        foreach($validated as $key => $value){
+            if($value == "" && ($key == 'name_secondary_contact' || $key == 'telephone_secondary_contact' || $key == 'email_secondary_contact')){
+                $validated[$key] = "None";
+            }
+        }
         $request->user()->groups()->create($validated);
         return redirect(route('group.index'));
     }
@@ -112,6 +119,13 @@ class GroupController extends Controller
             'pet_count' => 'required|integer',
             'need_accessibility' => 'required|boolean',
         ]); */
+        
+        //make secondary contact optional
+        foreach($validated as $key => $value){
+            if($value == "" && ($key == 'name_secondary_contact' || $key == 'telephone_secondary_contact' || $key == 'email_secondary_contact')){
+                $validated[$key] = "None";
+            }
+        }
         $group->update($validated);
         return redirect(route('group.index'));
     }

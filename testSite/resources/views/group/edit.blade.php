@@ -13,7 +13,9 @@
                 value="{{$group->name_group}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
-            <label for="booked">Booked Status:</label>
+            <input type="hidden" name="booked" value="1">
+            <input type="hidden" name="name_accommodation" value="{{$group->name_accommodation}}">
+            <!-- <label for="booked">Booked Status:</label>
             <input type="hidden" name="booked" value="0">
             @if($group->booked == "1")
             <input 
@@ -42,7 +44,7 @@
                 placeholder="{{ __('Eg: Hyatt Place') }}"
                 value="{{$group->name_accommodation}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
-            <br>
+            <br> -->
             <label for="telephone_primary_contact">Name of Primary Contact:</label><br>
             <input
                 type="text"

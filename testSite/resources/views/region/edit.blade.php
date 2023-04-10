@@ -13,7 +13,10 @@
                 value="{{$region->name_region}}"
                 class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
             <br>
-            <label for="amount_accommodations">Amount of Available Accommodations:</label><br>
+            <input type="hidden" id="amount_accommodations" name="amount_accommodations" value="{{$region->amount_accommodations}}"/>
+            <input type="hidden" id="amount_bookings" name="amount_bookings" value="{{$region->amount_bookings}}"/>
+            <input type="hidden" id="available_rooms" name="available_rooms" value="{{$region->available_rooms}}"/>
+            <!-- <label for="amount_accommodations">Amount of Available Accommodations:</label><br>
             <input 
                 type="text" 
                 id="amount_accommodations" 
@@ -38,7 +41,7 @@
                 name="available_rooms" 
                 placeholder="{{ __('Eg: 83') }}"
                 value="{{$region->available_rooms}}"
-                class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                class="block border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"> -->
             <x-input-error :messages="$errors->get('message')" class="mt-2" />
             <div class="mt-4 space-x-2">
                 <x-primary-button>{{ __('Save') }}</x-primary-button>

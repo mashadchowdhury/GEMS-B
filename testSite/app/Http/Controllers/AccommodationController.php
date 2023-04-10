@@ -124,9 +124,27 @@ class AccommodationController extends Controller
         $region_rooms = $region_rooms->value('available_rooms');
         $curr_accomm_rooms = Accommodation::select('number_of_rooms')->where('name_accommodation', '=', $accommodation->name_accommodation)->get();
         $curr_accomm_rooms = $curr_accomm_rooms->value('number_of_rooms');
+        $new_region_rooms = Region::select('available_rooms')->where('name_region', '=', $validated['name_region'])->get();
+        $new_region_rooms = $new_region_rooms->value('available_rooms');
+        $curr_num_accomm = Region::select('amount_accommodations')->where('name_region', '=', $accommodation->name_region)->get();
+        $curr_num_accomm = $curr_num_accomm->value('amount_accommodations');
+        $new_num_accomm = Region::select('amount_accommodations')->where('name_region', '=', $validated['name_region'])->get();
+        $new_num_accomm = $new_num_accomm->value('amount_accommodations');
 
+         
         $room_num_difference = $curr_accomm_rooms - $validated['number_of_rooms'];
-        Region::where('name_region', '=', $accommodation->name_region)->update(['available_rooms'=> $region_rooms - $room_num_difference]);
+        
+
+        //if region changes update accordingly
+        if($accommodation->name_region != $validated['name_region']){
+            //update current region
+            Region::where('name_region', '=', $accommodation->name_region)->update(['available_rooms' => $region_rooms - $curr_accomm_rooms, 'amount_accommodations' => $curr_num_accomm - 1]);
+            //update new region
+            Region::where('name_region', '=', $validated['name_region'])->update(['available_rooms' => $new_region_rooms + $validated['number_of_rooms'], 'amount_accommodations' => $new_num_accomm + 1]);
+        }else{
+            //update available rooms if an accommodation changes # rooms
+            Region::where('name_region', '=', $accommodation->name_region)->update(['available_rooms'=> $region_rooms - $room_num_difference]);
+        }
 
         $accommodation->update($validated);
         return redirect(route('accommodation.index'));

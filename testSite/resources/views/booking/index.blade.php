@@ -192,4 +192,9 @@
             </form>
         </span>
     </div>
+    @if (\Session::has('alert'))
+        <script>
+            alert("Group size too large for this accommodation");
+        </script>
+    @endif
 </x-app-layout>

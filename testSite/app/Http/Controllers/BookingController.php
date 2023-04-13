@@ -72,8 +72,9 @@ class BookingController extends Controller
         could also return view with msg then use isset in page to display the alert*/ 
         if($accom_num < $group_size){
             $msg = "Group size too large for this accommodation";
-            echo "<script type='text/javascript'>alert('$msg');</script>";
-            return redirect(route('booking.index'));
+            // echo "<script type='text/javascript'>alert('$msg');</script>";
+            // session(['alert' => $msg]);
+            return redirect(route('booking.index'))->with('alert', $msg);
             // return redirect()->back()->with('status',"Group size too large for this accommodation");
         }
         

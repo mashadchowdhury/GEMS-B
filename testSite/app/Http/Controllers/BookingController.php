@@ -67,19 +67,17 @@ class BookingController extends Controller
             Region::where('name_region', '=', $region_name)->update(["amount_accommodations" => $region_accomm - 1]);
         }
 
-        /*could implement script or something in booking view to take data passed along with this return to run the alert from
-        from with in the view file
-        could also return view with msg then use isset in page to display the alert*/ 
+        //check if group size exceeds the number of beds in the accommodation and triggers an alert in the redirected page
         if($accom_num < $group_size){
             $msg = "Group size too large for this accommodation";
-            // echo "<script type='text/javascript'>alert('$msg');</script>";
-            // session(['alert' => $msg]);
             return redirect(route('booking.index'))->with('alert', $msg);
-            // return redirect()->back()->with('status',"Group size too large for this accommodation");
         }
         
+        //update group table entry with booked accommodation
         Group::where('name_group','=', $validated['name_group'])->update(['name_accommodation' => $validated['name_accommodation']]);
+        //update region table entry to account for booking
         Region::where('name_region', '=', $region_name)->update(["amount_bookings" => $num_bookings + 1]);
+        //update accommodations table entry to account for booked beds
         Accommodation::where('name_accommodation', '=', $validated['name_accommodation'])->update(['number_of_beds' => $accom_num - $group_size]);
         $request->user()->bookings()->create($validated);
         return redirect(route('booking.index'));
@@ -153,12 +151,16 @@ class BookingController extends Controller
         $region_accomm = $num_bookings->value("amount_accommodations");
         $num_bookings = $num_bookings->value('amount_bookings');
 
+        //if accommodation was full booked re-add the accommodation to the region table
         if($accom_num == 0){
             Region::where('name_region', '=', $region_name)->update(["amount_accommodations" => $region_accomm + 1]);
         }
         
+        //update group table entry with booked accommodation
         Group::where('name_group','=', $booking->name_group)->update(['name_accommodation' => 'None']);
+        //update region table entry to account for booking
         Region::where('name_region', '=', $region_name)->update(["amount_bookings" => $num_bookings - 1]);
+        //update accommodations table entry to account for booked beds
         Accommodation::where('name_accommodation', '=', $booking->name_accommodation)->update(['number_of_beds' => $accom_num + $group_size]);
         $this->authorize('delete', $booking);
         $booking->delete();

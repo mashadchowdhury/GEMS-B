@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
-    //
     /**
      * Selects rows in the database that are like the term in the request and returns a response
      *
@@ -39,22 +38,19 @@ class SearchController extends Controller
 
     }
 
+    /**
+     * return related entries to view from search input
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function searchDB(Request $request){
         
         $search = $request->input('automplete-1');
-        //$search = $request->term;
 
-        //possible to get more than one row this way need to deal with that
-        //possible solution, add code to detect this here and route to a different page
-        //will also need to figure out a way to handle which table to search and return the correct view
-
-        //may want to look into narrowing down search more. first instead of get could be one way.
         $result = Region::where('name_region','like','%'.$search.'%')->get();
         $result2 = Accommodation::where('name_accommodation','like','%'.$search.'%')->get();
         $result3 = Group::where('name_group','like','%'.$search.'%')->get();
-        
-        //$combined = $result->concat($result3);
-
         
         return view('search.index', ['region' => $result, 'group' => $result3, 'accommodation' => $result2]);
     }
